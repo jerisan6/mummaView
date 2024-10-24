@@ -120,7 +120,7 @@ h2 {
 
 .navbar .btn-outline-light {
     position: relative;
-    padding: 10px 70px 10px 20px; /* Aumentamos aún más el padding derecho */
+    padding: 10px 70px 10px 20px;
     color: white;
     text-decoration: none;
     border: 2px solid white;
@@ -132,6 +132,23 @@ h2 {
     align-items: center;
 }
 
+.navbar .btn-outline-light::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-image: url('../recursos/Brillo_dorado.svg');
+    background-size: cover;
+    background-position: center;
+    transition: left 0.3s ease;
+}
+
+.navbar .btn-outline-light:hover::before {
+    left: 100%;
+}
+
 .navbar .btn-outline-light::after {
     content: '→';
     position: absolute;
@@ -140,7 +157,7 @@ h2 {
     transform: translateY(-50%);
     opacity: 1;
     transition: all 0.3s ease;
-    font-size: 50px; /* Flecha aún más grande */
+    font-size: 50px;
     line-height: 1;
 }
 
