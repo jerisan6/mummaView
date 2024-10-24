@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="164" height="164" viewBox="0 0 164 164">
+  <defs>
+    <style>
+      .cls-1, .cls-4, .cls-5 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        stroke: #161615;
+      }
+
+      .cls-4, .cls-5 {
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+      .cls-5 {
+        stroke: #171716;
+      }
+
+      .cls-6 {
+        opacity: 0;
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_251" data-name="Rectángulo 251" class="cls-1" width="164" height="164"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.785" y1="0.133" x2="0.246" y2="0.853" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ecca89"/>
+      <stop offset="1" stop-color="#744d14"/>
+    </linearGradient>
+  </defs>
+  <g id="Grupo_324" data-name="Grupo 324" class="cls-2">
+    <path id="Trazado_38485" data-name="Trazado 38485" class="cls-3" d="M164,82A82,82,0,1,1,82,0a82,82,0,0,1,82,82"/>
+    <circle id="Elipse_34" data-name="Elipse 34" class="cls-4" cx="68.738" cy="68.738" r="68.738" transform="translate(13.262 13.262)"/>
+    <path id="Trazado_38486" data-name="Trazado 38486" class="cls-5" d="M63.777,60.8l-22,22,21.65,21.651"/>
+    <line id="Línea_43" data-name="Línea 43" class="cls-5" x1="13.32" y2="49.962" transform="translate(74.573 57.194)"/>
+    <path id="Trazado_38487" data-name="Trazado 38487" class="cls-5" d="M96.474,104.456l22-22L96.825,60.8"/>
+    <circle id="Elipse_35" data-name="Elipse 35" class="cls-6" cx="82" cy="82" r="82"/>
+  </g>
+</svg>

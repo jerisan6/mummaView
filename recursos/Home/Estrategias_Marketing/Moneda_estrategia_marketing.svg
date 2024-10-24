@@ -1,0 +1,52 @@
+<svg id="Grupo_341" data-name="Grupo 341" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="164" height="164" viewBox="0 0 164 164">
+  <defs>
+    <style>
+      .cls-1, .cls-4, .cls-5 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        stroke: #161615;
+      }
+
+      .cls-4, .cls-5 {
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+      .cls-5 {
+        stroke: #171716;
+      }
+
+      .cls-6 {
+        opacity: 0;
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_42" data-name="Rectángulo 42" class="cls-1" width="164" height="164"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.755" y1="0.089" x2="0.302" y2="0.957" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ecca89"/>
+      <stop offset="1" stop-color="#744d14"/>
+    </linearGradient>
+  </defs>
+  <g id="Grupo_24" data-name="Grupo 24" class="cls-2">
+    <path id="Trazado_45" data-name="Trazado 45" class="cls-3" d="M164,82A82,82,0,1,1,82,0a82,82,0,0,1,82,82"/>
+    <circle id="Elipse_14" data-name="Elipse 14" class="cls-4" cx="68.738" cy="68.738" r="68.738" transform="translate(13.262 13.262)"/>
+    <path id="Trazado_46" data-name="Trazado 46" class="cls-5" d="M102.594,86.115c4.046-7.341,10.745-14.549,10.745-25.614,0-14.986-14.031-29.879-31.34-29.879S50.66,42.164,50.66,60.5,63.772,83.383,65.106,94.147a274.759,274.759,0,0,1,1.748,33.989H98.66a213.391,213.391,0,0,1,1.048-33.989H70.7"/>
+    <path id="Trazado_47" data-name="Trazado 47" class="cls-5" d="M102.594,86.115c-.4.727-.775,1.454-1.114,2.188"/>
+    <line id="Línea_9" data-name="Línea 9" class="cls-5" x2="22.718" transform="translate(70.699 103.67)"/>
+    <line id="Línea_10" data-name="Línea 10" class="cls-5" x2="22.718" transform="translate(70.699 114.68)"/>
+    <path id="Trazado_48" data-name="Trazado 48" class="cls-5" d="M82,47.481l4.822,9.959,10.962,1.508L89.8,66.612,91.755,77.5,82,72.28,72.245,77.5,74.2,66.612l-7.982-7.664L77.178,57.44Z"/>
+    <circle id="Elipse_15" data-name="Elipse 15" class="cls-6" cx="82" cy="82" r="82"/>
+  </g>
+</svg>

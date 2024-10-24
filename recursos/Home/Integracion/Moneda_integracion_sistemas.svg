@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="164" height="164" viewBox="0 0 164 164">
+  <defs>
+    <style>
+      .cls-1, .cls-4, .cls-5 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        stroke: #161615;
+      }
+
+      .cls-4, .cls-5 {
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+      .cls-5 {
+        stroke: #171716;
+      }
+
+      .cls-6 {
+        opacity: 0;
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_260" data-name="Rectángulo 260" class="cls-1" width="164" height="164"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.742" y1="0.092" x2="0.304" y2="0.939" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#eac887"/>
+      <stop offset="1" stop-color="#744d14"/>
+    </linearGradient>
+  </defs>
+  <g id="Grupo_342" data-name="Grupo 342" class="cls-2">
+    <path id="Trazado_38514" data-name="Trazado 38514" class="cls-3" d="M164,82A82,82,0,1,1,82,0a82,82,0,0,1,82,82"/>
+    <circle id="Elipse_38" data-name="Elipse 38" class="cls-4" cx="68.738" cy="68.738" r="68.738" transform="translate(13.262 13.262)"/>
+    <path id="Trazado_38515" data-name="Trazado 38515" class="cls-5" d="M108.008,58.565l-2.2-.654a3.173,3.173,0,0,1-1.876-1.815l-.573-1.485a3.2,3.2,0,0,1,.153-2.61l1.152-1.942a2.051,2.051,0,0,0-.268-2.327l-5.385-5.6a2.046,2.046,0,0,0-2.315-.36l-1.876,1.016a3.144,3.144,0,0,1-2.606.032l-1.812-.8a3.2,3.2,0,0,1-1.739-1.954l-.584-2.289a2.047,2.047,0,0,0-1.835-1.456l-7.77-.153a2.05,2.05,0,0,0-1.891,1.383l-.673,2.264A3.217,3.217,0,0,1,74.1,41.7l-1.991.8a3.124,3.124,0,0,1-2.6-.127L67.78,41.346a2.047,2.047,0,0,0-2.328.269L59.85,47a2.049,2.049,0,0,0-.359,2.315l1.056,1.95a3.211,3.211,0,0,1,.057,2.613c-.355.724-1.743,2.9-2.528,3.1l-2.221.567A2.049,2.049,0,0,0,54.4,59.376l-.153,7.768a2.051,2.051,0,0,0,1.383,1.892l2.2.653A3.182,3.182,0,0,1,59.706,71.5l.619,1.592a3.183,3.183,0,0,1-.149,2.609l-1.041,1.753a2.049,2.049,0,0,0,.269,2.328l5.386,5.6a2.049,2.049,0,0,0,2.316.36l1.719-.931a3.15,3.15,0,0,1,2.607-.034l1.84.812a3.194,3.194,0,0,1,1.739,1.952L75.56,89.7A2.049,2.049,0,0,0,77.4,91.158l7.769.152a2.046,2.046,0,0,0,1.891-1.382L87.69,87.8a3.172,3.172,0,0,1,1.816-1.878l1.721-.673a3.176,3.176,0,0,1,2.608.145l1.786,1.061a2.046,2.046,0,0,0,2.327-.269l5.6-5.384a2.05,2.05,0,0,0,.359-2.315l-.991-1.828a3.181,3.181,0,0,1-.041-2.612l.733-1.675a3.186,3.186,0,0,1,1.95-1.741l2.222-.567a2.049,2.049,0,0,0,1.456-1.835l.153-7.769A2.054,2.054,0,0,0,108.008,58.565Zm-26.469,19.4A14.233,14.233,0,1,1,96.048,64.019,14.232,14.232,0,0,1,81.539,77.968Z"/>
+    <circle id="Elipse_39" data-name="Elipse 39" class="cls-4" cx="3.908" cy="3.908" r="3.908" transform="translate(60.472 106.854)"/>
+    <circle id="Elipse_40" data-name="Elipse 40" class="cls-4" cx="3.908" cy="3.908" r="3.908" transform="translate(95.728 111.724)"/>
+    <circle id="Elipse_41" data-name="Elipse 41" class="cls-4" cx="3.908" cy="3.908" r="3.908" transform="translate(77.77 111.724)"/>
+    <path id="Trazado_38516" data-name="Trazado 38516" class="cls-4" d="M64.38,114.671v9.621H59.652v12.932"/>
+    <path id="Trazado_38517" data-name="Trazado 38517" class="cls-4" d="M99.636,119.541v5.916h6.352v12.932"/>
+    <line id="Línea_44" data-name="Línea 44" class="cls-4" y2="21.794" transform="translate(81.678 119.541)"/>
+    <path id="Trazado_38518" data-name="Trazado 38518" class="cls-4" d="M94.66,97.9S120,93.884,120,65.3,94.66,29.573,94.66,29.573"/>
+    <path id="Trazado_38519" data-name="Trazado 38519" class="cls-4" d="M96.932,92.311,94.442,97.9l5.194,3.408"/>
+    <path id="Trazado_38520" data-name="Trazado 38520" class="cls-4" d="M68.318,97.9s-25.34-4.019-25.34-32.6,25.34-35.726,25.34-35.726"/>
+    <path id="Trazado_38521" data-name="Trazado 38521" class="cls-4" d="M65.917,35.436l2.371-5.592-4.946-3.408"/>
+    <circle id="Elipse_42" data-name="Elipse 42" class="cls-6" cx="82" cy="82" r="82"/>
+  </g>
+</svg>
