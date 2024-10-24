@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="La mejor rentabilidad en los mercados de blockchain">
+    <title>50PLAN | Inversiones</title>
+    <link rel="shortcut icon" href="./img/icons/logo_black.svg" alt="icono 50plan">
+    
+    <!-- FUENTE GOOGLE FONTS : Barlow -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- ICONS: Font Awesome -->
+    <!-- Animaciones AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+    <!-- Boostrap efect -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Mis Estilos -->
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            z-index: 1000;
+        }
+        #floatingImage {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            max-height: 90%;
+            z-index: 1001;
+        }
+        #closeButton {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(255,255,255,0.7);
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Traductor google-->
+    <div class="btn-flotante2 pointer aos-init aos-animate">
+        <div id="google_translate_element" class="google"></div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'es,ca,eu,gl,en,fr,it,pt,de', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true}, 'google_translate_element');
+            }
+        </script>
+
+        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </div>
+    <!-- Fin traductor google-->
+    <div class="btn-flotante pointer aos-init aos-animate" id="iconwsp" onclick="window.open('https://wa.me/+34602507511');" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+        </svg>
+    </div>
+    
+    <div class="hm-header">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                        </svg>
+                </button>
+                <div class="logo">
+                    <img src="./img/icons/logo_white.svg" alt="">
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav navbar-menu">
+                        <li class="nav-item active" id="paralelogramo" data-aos="fade-down" data-aos-delay="300" data-aos-duration="1000">
+                            <a class="nav-link active" aria-current="page" href="./">INICIO</a>
+                        </li>
+                        <li class="nav-item" id="paralelogramo" data-aos="fade-down" data-aos-delay="600" data-aos-duration="1000">
+                            <a class="nav-link active" aria-current="page" href="#experiencia">EXPERIENCIA</a>
+                        </li>
+                        <li class="nav-item" id="paralelogramo" data-aos="fade-down" data-aos-delay="900" data-aos-duration="1000" onclick="window.location='#nosotros'">
+                            <a class="nav-link active" aria-current="page" href="#estrategia">ESTRATEGIA</a>
+                        </li>
+                        <li class="nav-item" id="paralelogramo" data-aos="fade-down" data-aos-delay="1200" data-aos-duration="1000">
+                            <a class="nav-link active" aria-current="page" href="#licencias">LICENCIAS</a>
+                        </li>
+                        <li class="nav-item" id="paralelogramo" data-aos="fade-down" data-aos-delay="1500" data-aos-duration="1000">
+                            <a class="nav-link active" aria-current="page" href="#contacto">CONTACTO</a>
+                        </li>
+                        <li class="nav-item dropdown indxone aos-init aos-animate" id="paralelogramo" data-aos="fade-down" data-aos-delay="1500" data-aos-duration="1000">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              ES
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li onclick="window.location='../es/'" class="pointer">
+                                    <img src="./img/icons/es.png" alt="icon spain language" class="imagen">
+                                    ES
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li onclick="window.location='../en/'" class="pointer">
+                                    <img src="./img/icons/en.png" alt="icon eeuu language" class="imagen">
+                                    EN
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item" id="paralelogramo" >
+                            <div class="flex">
+                                <a class="nav-link active pointer" aria-current="page" onclick="window.open('./calculator/simulador.html');">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-wallet" viewBox="0 0 16 16">
+                                        <path d="M0 3a2 2 0 0 1 2-2h13.5a.5.5 0 0 1 0 1H15v2a1 1 0 0 1 1 1v8.5a1.5 1.5 0 0 1-1.5 1.5h-12A2.5 2.5 0 0 1 0 12.5zm1 1.732V12.5A1.5 1.5 0 0 0 2.5 14h12a.5.5 0 0 0 .5-.5V5H2a2 2 0 0 1-1-.268M1 3a1 1 0 0 0 1 1h12V2H2a1 1 0 0 0-1 1"/>
+                                    </svg>
+                                    <div class="text" >
+                                        simulador
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="nav-item" id="paralelogramo">
+                            <div class="flex">
+                                <a class="nav-link active pointer" aria-current="page" onclick="window.open('https://app.50plan.pro/login');">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                                    </svg>
+                                    <div class="text">
+                                        Inicia sesión
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="nav-item" id="paralelogramo">
+                            <div class="flex">
+                                <a class="nav-link active pointer" aria-current="page" onclick="window.open('https://app.50plan.pro/register');">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person-plus" viewBox="0 0 16 16">
+                                        <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664zM13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5"/>
+                                    </svg>
+                                    <div class="text">
+                                        Registro
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- -->
+    <div class="carrousel"  id="menu">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="center">
+                        <div class="right" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
+                            <div class="hello" capitalize>Haz que tu</div>
+                            <div class="title">Dinero <strong>Trabaje</strong></div>
+                            <div class="title2">Para ti a partir de hoy mismo</div>
+                            <div class="txt">Aprovecha el arte del arbitraje financiero para maximizar el potencial de tu capital. Confía en nuestra estrategia probada y nuestra amplia experiencia para generar resultados de inversión sólidos y sostenibles.</div>
+                            <div class="flexh">
+                                <!--
+                                <div class="boton pointer" onclick="window.open('https://wa.me/+34602507511');">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                        <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                                    </svg>
+                                </div>
+                                -->
+                                <div class="boton pointer" onclick="window.open('./recursos/50plan.pdf')">Descargar presentación</div>
+                                <div class="boton pointer" onclick="window.open('./recursos/qrs.pdf')">Listado de Wallets</div>
+                            </div>
+                            
+                        </div>
+
+
+                    </div>
+                    
+                    <img src="./img/estetica/fondo_banner.webp" class="sliders" alt="Imagen de mujer inversionista en 50plan">
+                    <!-- Analizar la implementacion de mas imagene spara difrentes tamaños
+                    <img 
+                    srcset="./img/fondo_1_590w.webp 590w,
+                    ./img/fondo_1_1845w.webp 1845w,
+                    ./img/fondo_1_2200w.webp 2200w"
+                    sizes="(max-width: 590px) 590px,
+                            (max-width: 1845px) 1845px,
+                            2200px"
+                    src="./img/fondo_1.webp" class="sliders" alt="Imagen de mujer inversionista en 50plan">
+                    -->
+                </div>
+                <div class="carousel-item">
+                    <div class="center">
+                        <div class="right" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
+                            <div class="hello" capitalize>Invierte en</div>
+                            <div class="title">StartUps <strong>Mundiales</strong></div>
+                            <div class="title2">Con un solo click</div>
+                            <div class="txt">Empieza a capitalizar las oportunidades que ofrecen los mercados internacionales. Al diversificar tus inversiones en distintos países y regiones, puedes aumentar tus rendimientos y mitigar riesgos.</div>
+                            <div class="flexh">
+                                <!--
+                                <div class="boton pointer" onclick="window.open('https://wa.me/+34602507511');">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                        <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                                    </svg>
+                                </div>
+                                -->
+                                <div class="boton pointer" onclick="window.open('./recursos/50plan.pdf')">Descargar presentación</div>
+                                <div class="boton pointer" onclick="window.open('./recursos/qrs.pdf')">Listado de Wallets</div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <img src="./img/estetica/fondo_banner.webp" class="sliders" alt="Imagen de mujer inversionista en 50plan">
+                    <!-- Analizar la implementacion de mas imagene spara difrentes tamaños
+                    <img 
+                    srcset="./img/fondo_1_590w.webp 590w,
+                    ./img/fondo_1_1845w.webp 1845w,
+                    ./img/fondo_1_2200w.webp 2200w"
+                    sizes="(max-width: 590px) 590px,
+                            (max-width: 1845px) 1845px,
+                            2200px"
+                    src="./img/fondo_1.webp" class="sliders" alt="Imagen de mujer inversionista en 50plan">
+                    -->
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="experiencia" id="experiencia">
+        <div class="imgseccion pointer">
+            <div class="adentro"  data-aos="zoom-in-up" data-aos-delay="0" data-aos-duration="500">
+                <div class="number">+8</div>
+                <div class="txt">Años de experiencia</div>
+            </div>
+            <img src="./img/estetica/experiencia.webp" alt="">
+        </div>
+        <div class="imgseccion pointer" >
+            <div class="adentro" data-aos="zoom-in-up" data-aos-delay="300" data-aos-duration="500">
+                <div class="number">+75000</div>
+                <div class="txt">Transacciones exitosas</div>
+            </div>
+            <img src="./img/estetica/transacciones.webp" alt="">
+        </div>
+        <div class="imgseccion pointer" >
+            <div class="adentro" data-aos="zoom-in-up" data-aos-delay="600" data-aos-duration="500">
+                <div class="number">+20 M</div>
+                <div class="txt">USD en transacciones</div>
+            </div>
+            <img src="./img/estetica/cantidad.webp" alt="">
+        </div>
+    </div>
+    <div class="tip" id="estrategia">
+        <div class="izq" id="espacio_img_izq">
+            <img id="imagenefectoscroll" src="./img/estetica/maximiza.webp" alt="">
+        </div>
+        <div class="der" id="espacio_der">
+            <div class="title" id="espacio_title">Libera tu capital con una estrategia financiera probada.</div>
+            <div class="resumen">
+                Libera el poder de tu capital con 50PLAN. Nuestra estrategia financiera probada identifica oportunidades en el mercado para generar ganancias significativas.
+            </div>
+            <div class="text">
+                <ul>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"  class="bi bi-check2-circle" viewBox="0 0 16 16">
+                            <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                            <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/>
+                        </svg> 
+                        Estrategia financiera probada: 50PLAN.</li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"  class="bi bi-check2-circle" viewBox="0 0 16 16">
+                            <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                            <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/>
+                        </svg> 
+                        Identificamos oportunidades para ganancias.</li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"  class="bi bi-check2-circle" viewBox="0 0 16 16">
+                            <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                            <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/>
+                        </svg> 
+                        Siete años de experiencia respaldan nuestro enfoque.</li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                            <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                            <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/>
+                        </svg> 
+                        Resultados constantes en inversiones dinámicas.</li>
+                </ul>
+            </div>
+            <div class="cambiar" id="btn_cambiar">
+                <div class="btn" onclick="window.open('https://wa.me/+34602507511');">Asesoramiento</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var estagrande = 0;
+        var estachico = 0;
+        var imagenefectoscroll = document.getElementById("imagenefectoscroll");
+            addEventListener("scroll", (event) => {
+                //console.log("Scroll");
+                window_y = $(window).scrollTop(); // VALOR QUE SE HA MOVIDO DEL SCROLL
+                //console.log("Posicion del scrool: "+window_y.toFixed(2));
+                if ( window_y.toFixed(2) >= 1200.00) {
+                    //console.log("Es mayor de 917.00 por lo tanto se agrandará");
+                    //console.log("Se agrandara el componente");
+                    imagenefectoscroll.style.transitionDuration = "1s";
+                    imagenefectoscroll.style.transitionProperty = "transform";
+                    imagenefectoscroll.style.transform = "scale(1.085)";
+                    estachico = 0;
+                    estagrande = 1;
+                }
+                else if(window_y.toFixed(2) < 1200.00 && estagrande == 1){
+                    //console.log("Es menor de 1000.00 por lo tanto se achicara");
+                    //console.log("Se agrandara el componente");
+                    imagenefectoscroll.style.transitionDuration = "1s";
+                    imagenefectoscroll.style.transitionProperty = "transform";
+                    imagenefectoscroll.style.transform = "scale(1)";
+                    estachico = 1;
+                    estagrande = 0;
+                }
+                else{
+
+                }
+            });
+    </script>
+   <div class="targetas" id="licencias">
+        <div class="center">
+            <div class="title">Licencias de inversión</div>
+            <div class="trgs">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" style="background-image: url('./img/estetica/alfa.webp');">
+                        </div>
+                        <div class="flip-card-back alfa">
+                            <div class="izq">
+                                Inversion Inicial</br> <strong>$ 100 - $ 1999</strong></br>
+                                Interés Anual: <strong>30%</strong></br>
+                                Retiros: <strong>Mensuales</strong>
+                            </div>
+                            <div class="der pointer" data-bs-toggle="modal" data-bs-target="#exampleModalAlfa">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="var(--color-principal)" class="bi bi-journal-medical" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v.634l.549-.317a.5.5 0 1 1 .5.866L9 6l.549.317a.5.5 0 1 1-.5.866L8.5 6.866V7.5a.5.5 0 0 1-1 0v-.634l-.549.317a.5.5 0 1 1-.5-.866L7 6l-.549-.317a.5.5 0 0 1 .5-.866l.549.317V4.5A.5.5 0 0 1 8 4M5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"/>
+                                    <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
+                                    <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/>
+                                  </svg>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" style="background-image: url('./img/estetica/beta.webp');">
+                        </div>
+                        <div class="flip-card-back beta">
+                            <div class="izq">
+                                Inversion Inicial</br> <strong>$ 2000 - $ 3999</strong></br>
+                                Interés Anual: <strong>36%</strong></br>
+                                Retiros: <strong>Mensuales</strong>
+                            </div>
+                            <div class="der pointer" data-bs-toggle="modal" data-bs-target="#exampleModalBeta">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="var(--color-principal)" class="bi bi-journal-medical" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v.634l.549-.317a.5.5 0 1 1 .5.866L9 6l.549.317a.5.5 0 1 1-.5.866L8.5 6.866V7.5a.5.5 0 0 1-1 0v-.634l-.549.317a.5.5 0 1 1-.5-.866L7 6l-.549-.317a.5.5 0 0 1 .5-.866l.549.317V4.5A.5.5 0 0 1 8 4M5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"/>
+                                    <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
+                                    <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/>
+                                  </svg>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" style="background-image: url('./img/estetica/gamma.webp');">
+                        </div>
+                        <div class="flip-card-back gamma">
+                            <div class="izq">
+                                Inversion Inicial</br> <strong>$ 4000 - $ 5999</strong></br>
+                                Interés Anual: <strong>48%</strong></br>
+                                Retiros: <strong>Mensuales</strong>
+                            </div>
+                            <div class="der pointer" data-bs-toggle="modal" data-bs-target="#exampleModalGamma">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="var(--color-principal)" class="bi bi-journal-medical" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v.634l.549-.317a.5.5 0 1 1 .5.866L9 6l.549.317a.5.5 0 1 1-.5.866L8.5 6.866V7.5a.5.5 0 0 1-1 0v-.634l-.549.317a.5.5 0 1 1-.5-.866L7 6l-.549-.317a.5.5 0 0 1 .5-.866l.549.317V4.5A.5.5 0 0 1 8 4M5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"/>
+                                    <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
+                                    <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/>
+                                  </svg>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" style="background-image: url('./img/estetica/delta.webp');">
+                        </div>
+                        <div class="flip-card-back delta">
+                            <div class="izq">
+                                Inversion Inicial</br> <strong>$ 6000 - $ 10000</strong></br>
+                                Interés Anual: <strong>60%</strong></br>
+                                Retiros: <strong>Mensuales</strong>
+                            </div>
+                            <div class="der pointer" data-bs-toggle="modal" data-bs-target="#exampleModalDelta">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="var(--color-principal)" class="bi bi-journal-medical" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v.634l.549-.317a.5.5 0 1 1 .5.866L9 6l.549.317a.5.5 0 1 1-.5.866L8.5 6.866V7.5a.5.5 0 0 1-1 0v-.634l-.549.317a.5.5 0 1 1-.5-.866L7 6l-.549-.317a.5.5 0 0 1 .5-.866l.549.317V4.5A.5.5 0 0 1 8 4M5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"/>
+                                    <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
+                                    <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/>
+                                  </svg>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="beneficios">
+        <div class="imgseccion pointer">
+            <div class="linea"></div>
+            <div class="adentro">
+                <img src="./img/estetica/flujo.webp" alt="">
+                <div class="number">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="#c1c1c1" class="bi bi-cash-coin" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8m5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0"/>
+                        <path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195z"/>
+                        <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083q.088-.517.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1z"/>
+                        <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 6 6 0 0 1 3.13-1.567"/>
+                    </svg>
+                </div>
+                <div class="txt">
+                    Desbloquea un <strong>Flujo Constante de Ganancias:</strong> Maximiza tus <strong>Ingresos Semana a Semana.</strong>
+                </div>
+            </div>
+        </div>
+        <div class="imgseccion pointer">
+            <div class="linea"></div>
+            <div class="adentro">
+                <img src="./img/estetica/capital.webp" alt="">
+                <div class="number">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="#c1c1c1" class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                        <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5"/>
+                        <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85z"/>
+                    </svg>
+                </div>
+                <div class="txt">
+                    <strong>Pon tu capital a trabajar</strong> con la orientación de <strong>expertos</strong>
+                </div>
+            </div>
+        </div>
+        <div class="imgseccion pointer">
+            <div class="linea"></div>
+            <div class="adentro">
+                <img src="./img/estetica/dinero.webp" alt="">
+                <div class="number">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="#c1c1c1" class="bi bi-robot" viewBox="0 0 16 16">
+                        <path d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5M3 8.062C3 6.76 4.235 5.765 5.53 5.886a26.6 26.6 0 0 0 4.94 0C11.765 5.765 13 6.76 13 8.062v1.157a.93.93 0 0 1-.765.935c-.845.147-2.34.346-4.235.346s-3.39-.2-4.235-.346A.93.93 0 0 1 3 9.219zm4.542-.827a.25.25 0 0 0-.217.068l-.92.9a25 25 0 0 1-1.871-.183.25.25 0 0 0-.068.495c.55.076 1.232.149 2.02.193a.25.25 0 0 0 .189-.071l.754-.736.847 1.71a.25.25 0 0 0 .404.062l.932-.97a25 25 0 0 0 1.922-.188.25.25 0 0 0-.068-.495c-.538.074-1.207.145-1.98.189a.25.25 0 0 0-.166.076l-.754.785-.842-1.7a.25.25 0 0 0-.182-.135"/>
+                        <path d="M8.5 1.866a1 1 0 1 0-1 0V3h-2A4.5 4.5 0 0 0 1 7.5V8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1v-.5A4.5 4.5 0 0 0 10.5 3h-2zM14 7.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.5A3.5 3.5 0 0 1 5.5 4h5A3.5 3.5 0 0 1 14 7.5"/>
+                      </svg>
+                </div>
+                <div class="txt">
+                    Haz que tu <strong>dinero trabaje más inteligentemente, no más duro</strong>.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="testimonio">
+        <div class="left">
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="title">Testimonios de Nuestros Inversores</div>
+                    <div class="icon">
+                        <img src="./img/estetica/comillas.svg" alt="" class="image">
+                    </div>
+                    <div class="text">"¡Increíble, mis ganancias se multiplicaron gracias al arbitraje financiero! Antes de descubrir esta estrategia, mis inversiones apenas daban frutos. Pero desde que me uní a este equipo experto, mi cartera ha experimentado un crecimiento excepcional. La combinación de conocimientos especializados y enfoque estratégico me ha proporcionado resultados asombrosos. Ahora me siento más confiado en mi futuro financiero y estoy emocionado por las oportunidades que el arbitraje continúa brindándome. ¡Una verdadera joya para mi cartera!"</div>
+                    <div class="image">
+                        <img src="./img/person/persona_1.webp" alt="" class="cara">
+                    </div>
+                    <div class="nombre">Giancarlo, INVERSIONISTA SATISFECHO.</div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">Testimonios de Nuestros Inversores</div>
+                    <div class="icon">
+                        <img src="./img/estetica/comillas.svg" alt="" class="image">
+                    </div>
+                    <div class="text">"No puedo creer lo bien que me ha ido con esta estrategia de arbitraje financiero. Cuando me decidí a probarla, tenía mis dudas, pero el equipo detrás de esta compañía demostró ser excepcional. Sus decisiones informadas y análisis meticulosos han llevado mis inversiones a niveles que nunca imaginé. Estoy realmente impresionada y emocionada por el futuro. Gracias a ellos, he alcanzado mis metas financieras más rápido de lo que esperaba. ¡El arbitraje es una poderosa herramienta para cualquier inversor serio!"</div>
+                    <div class="image">
+                        <img src="./img/person/persona_3.webp" alt="" class="cara">
+                    </div>
+                    <div class="nombre">Eduard, INVERSIONISTA SATISFECHO.</div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">Testimonios de Nuestros Inversores</div>
+                    <div class="icon">
+                        <img src="./img/estetica/comillas.svg" alt="" class="image">
+                    </div>
+                    <div class="text">"Siempre fui cauteloso con mis inversiones, pero el arbitraje financiero me demostró que se puede ganar dinero de manera segura y rentable. La habilidad del equipo para identificar oportunidades de compra y venta en los mercados financieros es impresionante. He visto cómo mis ganancias crecen de manera constante y consistente, lo cual me brinda una tranquilidad inigualable. Estoy agradecido por haber encontrado esta estrategia y ahora puedo invertir con confianza sabiendo que mi dinero está en buenas manos."</div>
+                    <div class="image">
+                        <img src="./img/person/persona_2.webp" alt="" class="cara">
+                    </div>
+                    <div class="nombre">Chema, INVERSIONISTA SATISFECHO.</div>
+                </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="gif">
+                <img src="./gif/play.gif" alt="" class="image pointer" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">
+                <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Opinión de experto | Rene Ochoa</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="stopvideo();"></button>
+                        </div>
+                        <div class="modal-body">
+                          
+                          <video id="videoopinion1" class="videoopinion" controls src="./video/Rene_Ochoa_opinion.mp4"></video>
+                        </div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" onclick="stopvideo();">Siguiente ponente</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Opinión de experto | Juan Agudelo</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="stopvideo();"></button>
+                        </div>
+                        <div class="modal-body">
+                            <video id="videoopinion2" class="videoopinion" controls src="./video/Juan_Pablo_opinion.mp4"></video>
+                        </div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" onclick="stopvideo();">Anterior ponente</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <script>
+                    var videoopinion1 = document.getElementById("videoopinion1");
+                    var videoopinion2 = document.getElementById("videoopinion2");
+                    function vervideo(){
+                        //console.log("abrir modal");
+                        //videoopinion1.play();
+                        //$('#exampleModalCar').modal('show'); // abrir
+                    }
+                    function stopvideo(){
+                        videoopinion1.pause();
+                        videoopinion2.pause();
+                    }
+                  </script>
+                
+            </div>
+        </div>
+    </div>
+    <div class="banner_1">
+        <div class="center">
+            <div class="left">
+                Asegura tu futuro financiero con nuestra probada estrategia de inversión
+            </div>
+            <div class="right">
+                <div class="boton pointer" onclick="window.open('https://wa.me/+34602507511');">COMIENCE AHORA SU VIAJE DE INVERSIÓN</div>
+            </div>
+        </div>
+    </div>
+    <div class="pie" id="contacto">
+        <div class="tres">
+            <div class="logo">
+                <img src="./img/icons/logo_black.svg" alt="" class="image">
+            </div>
+            <div class="text">
+                <p>Jgil MultiMarket – Sucursal España</p>
+                <p>Email: info@50plan.pro</p>
+                <p>Colombia: Carrera 27 N°37 33 Ofi. 302 Centro Empresarial Green Gold</p>
+                <p>España: Av. Ramón y Cajal 2, 29640 Fuengirola, Málaga, España.</p>
+            </div>
+        </div>
+        <div class="tres ml-100">
+            <div class="title">
+                Enlaces
+            </div>
+            <div class="text">
+                <ul>
+                    <li><a href="./">Inicio</a> </li>
+                    <li><a href="#experiencia">Experiencia</a> </li>
+                    <li><a href="#estrategia">Estrategia</a> </li>
+                    <li><a href="#licencias">Licencias</a> </li>
+                    <li><a href="#contacto">Contacto</a> </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="tres">
+            <div class="title">
+                Legal
+            </div>
+            <div class="text">
+                <ul>
+                    <li>Legal</li>
+                    <li>Aviso legal</li>
+                    <li>Políticas y términos de privacidad</li>
+                    <li>Políticas de cookies</li>
+                    <li><a href="#contactolegal">Contacto Legal</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <hr>
+    <div class="espaciado">
+        
+        <div class="derechos">© Todos los Derechos Reservados por 50PLAN</div>
+    </div>
+    
+
+    <!-- Modal alfa-->
+    <div class="modal fade" id="exampleModalAlfa" tabindex="-1" aria-labelledby="exampleModalAlfaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title" id="exampleModalAlfaLabel">
+                <img src="./img/estetica/alfa.webp" alt="">
+            </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="left">
+                    Licencia Alfa
+                </div>
+                <div class="right">
+                    <p><strong>Inversión inicial: </strong>$100 - $1999</p>
+                    <p><strong>Interés mensual: </strong>2.5%</p>
+                    <p><strong>Cobro de 5 órbitas:</strong> En tu comunidad (Promotores).</p>
+                    <p><strong>Pago de intereses:</strong> Todos los viernes.</p>
+                    <p><strong>Retiro de capital:</strong> 30 días.</p>
+                    <p><strong>Genera interés compuesto:</strong> Inversión menor a 1000</p>
+                    <p><strong>Retiros menores:</strong> 48hs (5-1000 USDT), BEP-20</p>
+                </div>
+                <div class="line">
+                    
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+        <!-- Modal beta-->
+        <div class="modal fade" id="exampleModalBeta" tabindex="-1" aria-labelledby="exampleModalBetaLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title" id="exampleModalBetaLabel">
+                    <img src="./img/estetica/beta.webp" alt="">
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="left">
+                        Licencia Beta
+                    </div>
+                    <div class="right">
+                        <p><strong>Inversión inicial:</strong> $2000 - $3999</p>
+                        <p><strong>Interés mensual: </strong>3%</p>
+                        <p><strong>Cobro de 5 órbitas:</strong> En tu comunidad (Promotores).</p>
+                        <p><strong>Pago de intereses:</strong> Todos los viernes.</p>
+                        <p><strong>Retiro de capital:</strong> 30 días.</p>
+                        <p><strong>Genera interés compuesto:</strong> Inversión menor a 1000</p>
+                        <p><strong>Retiros menores:</strong> 48hs (5-1000 USDT), BEP-20</p>
+                    </div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            </div>
+        </div>
+                <!-- Modal Gamma-->
+                <div class="modal fade" id="exampleModalGamma" tabindex="-1" aria-labelledby="exampleModalGammaLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h1 class="modal-title" id="exampleModalGammaLabel">
+                            <img src="./img/estetica/gamma.webp" alt="">
+                        </h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="left">
+                                Licencia Gamma
+                            </div>
+                            <div class="right">
+                                <p><strong>Inversión inicial:</strong> $4000 - $5999</p>
+                                <p><strong>Interés mensual: </strong>4%</p>
+                                <p><strong>Cobro de 5 órbitas:</strong> En tu comunidad (Promotores).</p>
+                                <p><strong>Pago de intereses:</strong> Todos los viernes.</p>
+                                <p><strong>Retiro de capital:</strong> 30 días.</p>
+                                <p><strong>Genera interés compuesto:</strong> Inversión menor a 1000</p>
+                                <p><strong>Retiros menores:</strong> 48hs (5-1000 USDT), BEP-20</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- Modal Delta-->
+                <div class="modal fade" id="exampleModalDelta" tabindex="-1" aria-labelledby="exampleModalDeltaLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h1 class="modal-title" id="exampleModalDeltaLabel">
+                            <img src="./img/estetica/delta.webp" alt="">
+                        </h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="left">
+                                Licencia Delta
+                            </div>
+                            <div class="right">
+                                <p><strong>Inversión inicial:</strong> $6000 - $10000</p>
+                                <p><strong>Interés mensual: </strong>5%</p>
+                                <p><strong>Cobro de 5 órbitas:</strong> En tu comunidad (Promotores).</p>
+                                <p><strong>Pago de intereses:</strong> Todos los viernes.</p>
+                                <p><strong>Retiro de capital:</strong> 30 días.</p>
+                                <p><strong>Genera interés compuesto:</strong> Inversión menor a 1000</p>
+                                <p><strong>Retiros menores:</strong> 48hs (5-1000 USDT), BEP-20</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+    <!-- Animaciones : Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Animaciones : AOS-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- Mi Script -->
+
+
+    <script>
+    
+        AOS.init({
+            duration: 1200,
+        })
+
+
+    </script>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                renderBullet: function (index, className) {
+                    //return '<span class="' + className + '">' + (index + 1) + "</span>";
+                    return '<span class="' + className + '">'+"</span>"
+                },
+            },
+            });
+    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <div id="overlay"></div>
+    <div id="floatingImage">
+        <img src="https://app.50plan.pro/files/Newsletter.png" alt="Imagen flotante">
+        <button id="closeButton">X</button>
+    </div>
+
+    <script>
+        const overlay = document.getElementById('overlay');
+        const floatingImage = document.getElementById('floatingImage');
+        const closeButton = document.getElementById('closeButton');
+
+        function showImage() {
+            overlay.style.display = 'block';
+            floatingImage.style.display = 'block';
+        }
+
+        function hideImage() {
+            overlay.style.display = 'none';
+            floatingImage.style.display = 'none';
+        }
+
+        // Mostrar la imagen al cargar la página
+        window.addEventListener('load', showImage);
+
+        // Cerrar la imagen al hacer clic en el botón de cerrar
+        closeButton.addEventListener('click', hideImage);
+
+        // Cerrar la imagen al hacer clic fuera de ella
+        overlay.addEventListener('click', hideImage);
+
+        // Evitar que la imagen se cierre al hacer clic en ella
+        floatingImage.addEventListener('click', function(event) {
+            event.stopPropagation();
+        });
+
+        // Mantener la imagen visible al deslizar
+        window.addEventListener('scroll', function() {
+            if (floatingImage.style.display === 'block') {
+                floatingImage.style.top = '50%';
+                floatingImage.style.left = '50%';
+                floatingImage.style.transform = 'translate(-50%, -50%)';
+            }
+        });
+    </script>
+</body>
+</html>
