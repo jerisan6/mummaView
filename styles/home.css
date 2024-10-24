@@ -192,3 +192,19 @@ h2 {
     right: 15px;
     color: #C57C21;
 }
+
+.services-section {
+    background-color: black;
+    background-image: url('../recursos/Fondo de títulos-opacidad75.png');
+    background-size: cover;
+    background-position: center;
+    padding: 160px 0; /* Aumentado para más espacio vertical */
+    text-align: center;
+}
+
+.services-content h2 {
+    color: white;
+    font-family: "Baskervville", serif; /* Cambiado a Baskervville */
+    font-size: 2.8rem;
+    margin: 0;
+}
