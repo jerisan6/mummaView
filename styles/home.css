@@ -247,7 +247,7 @@ h2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: "Baskervville", serif;
+    font-family: "Montserrat", serif;
     font-size: 2.5rem;
     color: white;
     opacity: 0;
@@ -256,7 +256,7 @@ h2 {
 }
 
 .image-section:hover .moneda-img {
-    transform: translateX(350%); /* Mueve la imagen aún más a la derecha */
+    transform: translateX(40vw); /* Mueve la imagen al borde derecho de la ventana */
 }
 
 .image-section:hover .service-text {
@@ -264,5 +264,9 @@ h2 {
 }
 
 .image-section:hover {
-    background-image: url('../recursos/Home/Servicios/transformacion-digital.jpg');
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+        url('../recursos/Home/Servicios/transformacion-digital.jpg');
+    background-size: cover;
+    background-position: center;
 }
