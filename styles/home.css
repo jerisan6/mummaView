@@ -120,13 +120,16 @@ h2 {
 
 .navbar .btn-outline-light {
     position: relative;
-    padding: 10px 20px;
+    padding: 10px 70px 10px 20px; /* Aumentamos aún más el padding derecho */
     color: white;
     text-decoration: none;
     border: 2px solid white;
     transition: all 0.3s ease;
     overflow: hidden;
     border-radius: 0;
+    background-color: transparent;
+    display: inline-flex;
+    align-items: center;
 }
 
 .navbar .btn-outline-light::after {
@@ -135,17 +138,20 @@ h2 {
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
-    opacity: 0;
+    opacity: 1;
     transition: all 0.3s ease;
+    font-size: 50px; /* Flecha aún más grande */
+    line-height: 1;
 }
 
-.navbar .btn-outline-light:hover {
+.navbar .btn-outline-light:hover,
+.navbar .btn-outline-light:hover .nav-link {
+    color: #C57C21 !important;
+    border-color: #C57C21;
     background-color: transparent;
-    color: white;
-    padding-right: 40px;
 }
 
 .navbar .btn-outline-light:hover::after {
-    opacity: 1;
     right: 15px;
+    color: #C57C21;
 }
