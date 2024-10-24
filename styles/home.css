@@ -204,9 +204,12 @@ h2 {
 
 .services-content h2 {
     color: white;
-    font-family: "Baskervville", serif; /* Cambiado a Baskervville */
-    font-size: 2.8rem;
-    margin: 0;
+    font-family: "Baskervville", serif;
+    font-size: 2.2rem;
+}
+.services-content {
+    text-align: center;
+    /* Otros estilos que necesites */
 }
 
 .image-section {
@@ -270,3 +273,195 @@ h2 {
     background-size: cover;
     background-position: center;
 }
+
+.image-section.consultoria:hover {
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+        url('../recursos/Home/Consultoria/Consultoria.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.image-section.desarrollo:hover {
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+        url('../recursos/Home/Desarrollo/DesarrolloSw.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.image-section.ciberseguridad:hover {
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+        url('../recursos/Home/Ciberseguridad/Ciberseguridad.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.image-section.marketing:hover {    
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+        url('../recursos/Home/Estrategias_Marketing/Estrategias_Marketing.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.image-section.integracion:hover {
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+        url('../recursos/Home/Integracion/Integracion.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Si quieres algún estilo específico para la sección "Lo que nos define" */
+.define-section {
+    justify-content: center;
+}
+
+
+.nosDefine-seccion {
+    background-image: url('../recursos/Home/NosDefine/Fondo_nos_define.png');
+    background-size: cover;
+    background-position: center;
+    padding: 300px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* El resto del CSS permanece igual */
+
+.button-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.define-button {
+    position: absolute;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: transparent;
+    border: none;
+}
+
+.define-button:hover {
+    transform: translateY(-40px); /* Ajusta el valor para cambiar la altura del movimiento */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra para dar efecto de elevación */
+}
+
+.define-button:nth-child(1) {
+    top: -20%; /* Ajusta este valor para mover el botón más arriba */
+    left: 15%;
+}
+
+.define-button:nth-child(2) {
+    top: -20%;
+    right: 45%;
+}
+
+.define-button:nth-child(3) {
+    top: -20%;
+    right: 15%;
+}
+
+.define-button:nth-child(4) {
+    top: 100%;
+    left: 29%;
+}
+
+.define-button:nth-child(5) {
+    top: 100%;
+    right: 30%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px;
+}
+
+.grid-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+.grid-item, .silver-container, .iuva-container, .plan50-container, .houseClub-container, .toyCars-container, .mumma-container, .vendenos-container {
+    flex: 1 1 calc(25% - 20px); /* 4 elementos por fila */
+    max-width: calc(25% - 20px);
+    padding: 30px; /* Aumenta el padding para hacerlos más grandes */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .grid-item, .silver-container, .iuva-container, .plan50-container, .houseClub-container, .toyCars-container, .mumma-container, .vendenos-container {
+        flex: 1 1 calc(33.333% - 20px); /* 3 elementos por fila en pantallas más pequeñas */
+        max-width: calc(33.333% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-item, .silver-container, .iuva-container, .plan50-container, .houseClub-container, .toyCars-container, .mumma-container, .vendenos-container {
+        flex: 1 1 100%; /* 1 elemento por fila en pantallas muy pequeñas */
+        max-width: 100%;
+    }
+}
+
+
+
+.silver-container:hover {    
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+        url('../recursos/Home/Confian/Silver/SilverFondo.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.iuva-container:hover {    
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+        url('../recursos/Home/Confian/Iuva/IuvaFondo.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.plan50-container:hover {    
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+        url('../recursos/Home/Confian/50plan/50Plan.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.houseClub-container:hover {    
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+        url('../recursos/Home/Confian/HouseClub/HouseClub.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.toyCars-container:hover {    
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+        url('../recursos/Home/Confian/ToyCars/ToyCars.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.mumma-container:hover {    
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+        url('../recursos/Home/Confian/Mumma/Mumma.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.vendenos-container:hover {    
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+        url('../recursos/Home/Confian/Vendenos/Vendenos.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+
