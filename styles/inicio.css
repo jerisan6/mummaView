@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.baskervville-regular {
+    font-family: "Baskervville", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.baskervville-regular-italic {
+    font-family: "Baskervville", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.montserrat-regular {
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    font-size: 35px;
+    font-family: "Baskervville", serif;
+    padding: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navbar-brand {
+    position: relative;
+    display: inline-block;
+}
+
+.navbar-brand::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('C:/MummaProjects/Mummaview/mummaView/recursos/NavBar/Degradado_fondo_M.svg');
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.navbar-brand:hover::before {
+    opacity: 1;
+}
+
+.navbar-brand img {
+    height: 80px;
+    width: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.navbar-nav .nav-item {
+    position: relative;
+    padding: 0 10px;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    transform: translateX(0);
+}
+
+.navbar .btn-outline-light {
+    color: #ffffff;
+    border-color: #ffffff;
+    border-width: 2px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.navbar .btn-outline-light::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-image: url('../recursos/NavBar/Brillo_dorado.svg');
+    background-size: cover;
+    background-position: center;
+    transition: left 0.3s ease;
+}
+
+.navbar .btn-outline-light:hover::before {
+    left: 100%;
+}
+
+.navbar .btn-outline-light:hover {
+    color: #C57C21;
+    background-color: transparent;
+    border-color: #C57C21;
+}
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.texto-central {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+    color: white;
+    z-index: 2;
+}
+
+.texto-central h1 {
+    font-family: "Baskervville", serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.texto-central p {
+    font-family: "Baskervville", serif;
+    font-size: 1.5rem;
+}
+
+/* Media queries para hacer el texto responsive */
+@media (max-width: 768px) {
+    .texto-central h1 {
+        font-size: 2.5rem;
+    }
+
+    .texto-central p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .texto-central h1 {
+        font-size: 2rem;
+    }
+
+    .texto-central p {
+        font-size: 1rem;
+    }
+}
+
+body {
+    padding-top: 0; /* Elimina el padding-top */
+}
+
+.servicios-preview {
+    background-image: url('../recursos/Fondo de títulos-opacidad75.png');
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicios-preview .servicios-content {
+    text-align: center;
+}
+
+.servicios-preview h2 {
+    color: #ffffff; /* Ajusta el color del texto según sea necesario */
+    font-family: "Baskervville", serif;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.image-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 50px 0;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.3s ease;
+    overflow: hidden;
+}
+
+.image-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.moneda-img {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.service-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Montserrat", serif;
+    font-size: 2.5rem;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 3;
+}
+
+.image-section:hover .moneda-img {
+    transform: translateX(40vw); /* Mueve la imagen al borde derecho de la ventana */
+}
+
+.image-section:hover .service-text {
+    opacity: 1;
+}
+
+.image-section:hover {
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+        url('../recursos/Home/Servicios/transformacion-digital.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.image-section.consultoria:hover {
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+        url('../recursos/Home/Consultoria/Consultoria.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.image-section.desarrollo:hover {
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+        url('../recursos/Home/Desarrollo/DesarrolloSw.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.image-section.ciberseguridad:hover {
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+        url('../recursos/Home/Ciberseguridad/Ciberseguridad.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.image-section.marketing:hover {    
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+        url('../recursos/Home/Estrategias_Marketing/Estrategias_Marketing.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.image-section.integracion:hover {
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+        url('../recursos/Home/Integracion/Integracion.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.services-section.define-section {
+    background-image: url('../recursos/Fondo de títulos-opacidad75.png');
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-section.define-section .services-content {
+    text-align: center;
+}
+
+.services-section.define-section h2 {
+    color: #ffffff; /* Ajusta el color del texto según sea necesario */
+    font-family: "Baskervville", serif;
+    font-size: 3rem;
+    margin: 0;
+}
