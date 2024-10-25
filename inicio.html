@@ -77,13 +77,15 @@
         <div class="service-text">Integración de sistemas y automatizacion de marketing</div>
     </div>
 
-    <div class="services-section define-section">
-        <div class="services-content">
+    <!-- Puedes añadir más secciones aquí -->
+    <div class="nosDefine-seccion">
+        <div class="nosDefine-seccion-content">
             <h2>Lo que nos define</h2>
         </div>
     </div>
-    <div class="nosDefine-seccion"></div>
-        <div class="button-container">
+    
+    <div class="nosDefineButtons">
+        <div class="nosDefineButtons-container">
             <button class="define-button">
                 <img src="recursos/Home/NosDefine/01_Innovacion_disruptiva.svg" alt="Innovación disruptiva" class="button-icon">
             </button>
@@ -91,19 +93,82 @@
                 <img src="recursos/Home/NosDefine/02_Excelencia_tecnica.svg" alt="Excelencia técnica" class="button-icon">
             </button>
             <button class="define-button">
-                <img src="recursos/Home/NosDefine/03_Etica_transparencia.svg" alt="Excelencia técnica" class="button-icon">
+                <img src="recursos/Home/NosDefine/03_Etica_transparencia.svg" alt="Ética y transparencia" class="button-icon">
             </button>
             <button class="define-button">
                 <img src="recursos/Home/NosDefine/04_Orientacion_cliente.svg" alt="Orientación al cliente" class="button-icon">
             </button>
             <button class="define-button">
-                <img src="recursos/Home/NosDefine/05_Responsabilidad.svg" alt="Innovación disruptiva" class="button-icon">
+                <img src="recursos/Home/NosDefine/05_Responsabilidad.svg" alt="Responsabilidad" class="button-icon">
             </button>
         </div>
     </div>
+    <div class="confian-seccion">
+        <div class="confian-seccion-content">
+            <h2>Confían en nosotros</h2>
+        </div>
+    </div>
+    <div class="container"></div>
+        <div class="grid-section">
+            <div class="silver-container" onmouseover="cambiarImagenSilver(true)" onmouseout="cambiarImagenSilver(false)">
+                <img id="silver-image" src="recursos/Home/Confian/Silver/Silver_1.svg" alt="Silver Logo" class="center-image">
+            </div>
+            <div class="iuva-container" onmouseover="cambiarImagenIuva(true)" onmouseout="cambiarImagenIuva(false)">
+                <img id="iuva-image" src="recursos/Home/Confian/Iuva/IUVA_1.svg" alt="IUVA Logo" class="center-image">
+            </div>
+            <div class="plan50-container" onmouseover="cambiarImagen50Plan(true)" onmouseout="cambiarImagen50Plan(false)">
+                <img id="50plan-image" src="recursos/Home/Confian/50plan/50_1.svg" alt="Plan 50 Logo" class="center-image">
+            </div>
+            <div class="houseClub-container" onmouseover="cambiarImagenHouseClub(true)" onmouseout="cambiarImagenHouseClub(false)">
+                <img id="houseClub-image" src="recursos/Home/Confian/HouseClub/House_Club_1.svg" alt="House Club Logo" class="center-image">
+            </div>
+            <div class="toyCars-container" onmouseover="cambiarImagenToyCars(true)" onmouseout="cambiarImagenToyCars(false)">
+                <img id="toyCars-image" src="recursos/Home/Confian/ToyCars/Toy_Cars_1.svg" alt="Toy Cars Logo" class="center-image">
+            </div>
+            <div class="mumma-container" onmouseover="cambiarImagenMumma(true)" onmouseout="cambiarImagenMumma(false)">
+                <img id="mumma-image" src="recursos/Home/Confian/Mumma/Muma_Net_1.svg" alt="Mumma Logo" class="center-image">
+            </div>
+            <div class="vendenos-container" onmouseover="cambiarImagenVendenos(true)" onmouseout="cambiarImagenVendenos(false)">
+                <img id="vendenos-image" src="recursos/Home/Confian/Vendenos/Vendenos_1.svg" alt="Vendenos Logo" class="center-image">
+            </div>
+        </div>
+    </div>
 
-    <!-- Puedes añadir más secciones aquí -->
+    <footer class="informacion-redes">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="footer-content">
+                        <div class="footer-left">
+                            <h2 class="logo">MUMMA</h2>
+                            <p class="sublogo">Group</p>
+                            <ul class="enlaces-legales">
+                                <li><a href="#">Aviso legal</a></li>
+                                <li><a href="#">Políticas y términos de privacidad</a></li>
+                                <li><a href="#">Términos de uso</a></li>
+                                <li><a href="#">Políticas de cookies</a></li>
+                            </ul>
+                            <div class="redes-sociales">
+                                <a href="#" class="red-social facebook"></a>
+                                <a href="#" class="red-social instagram"></a>
+                                <a href="#" class="red-social linkedin"></a>
+                                <a href="#" class="red-social whatsapp"></a>
+                                <a href="#" class="red-social email"></a>
+                            </div>
+                            <p class="copyright">© 2024 Mumma Group International</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 offset-md-2">
+                    <h3>Encuéntranos en</h3>
+                    <p>Av. Circunvalación del Golf los Incas - Santiago de Surco.</p>
+                    <div class="mapa"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="javascript/Home/home.js"></script>
 </body>
 </html>

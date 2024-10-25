@@ -52,7 +52,7 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color:transparent;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     font-size: 35px;
@@ -322,4 +322,260 @@ body {
         url('../recursos/Home/Integracion/Integracion.jpg');
     background-size: cover;
     background-position: center;
+}
+
+.nosDefine-seccion {
+    background-image: url('../recursos/Fondo de títulos-opacidad75.png');
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nosDefine-seccion .nosDefine-seccion-content {
+    text-align: center;
+}
+
+.nosDefine-seccion h2 {
+    color: #ffffff; /* Ajusta el color del texto según sea necesario */
+    font-family: "Baskervville", serif;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.nosDefineButtons {
+    background-image: url('../recursos/Home/NosDefine/Fondo_nos_define.png');
+    background-size: cover; /* La imagen cubrirá todo el div */
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; /* El ancho será el 100% del contenedor */
+    height: 70vh; /* La altura será el 70% de la altura de la ventana */
+    padding: 5vh 0; /* Ajusta el padding según sea necesario */
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.define-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.define-button:hover {
+    transform: translateY(-10px); /* Ajusta este valor para cambiar la altura de elevación */
+}
+
+.button-icon {
+    width: 100px; /* Ajusta según el tamaño deseado */
+    height: auto;
+}
+.confian-seccion {
+    background-image: url('../recursos/Fondo de títulos-opacidad75.png');
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confian-seccion .confian-seccion-content {
+    text-align: center;
+}
+
+.confian-seccion h2 {
+    color: #ffffff; /* Ajusta el color del texto según sea necesario */
+    font-family: "Baskervville", serif;
+    font-size: 3rem;
+    margin: 0;
+}
+.grid-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los elementos */
+    background-color: black;
+}
+
+.grid-item, .silver-container, .iuva-container, .plan50-container, .houseClub-container, .toyCars-container, .mumma-container, .vendenos-container {
+    flex: 1 1 calc(25% - 20px); /* 4 elementos por fila */
+    max-width: calc(25% - 20px);
+    padding: 30px; /* Aumenta el padding para hacerlos más grandes */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .grid-item, .silver-container, .iuva-container, .plan50-container, .houseClub-container, .toyCars-container, .mumma-container, .vendenos-container {
+        flex: 1 1 calc(33.333% - 20px); /* 3 elementos por fila en pantallas más pequeñas */
+        max-width: calc(33.333% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-item, .silver-container, .iuva-container, .plan50-container, .houseClub-container, .toyCars-container, .mumma-container, .vendenos-container {
+        flex: 1 1 100%; /* 1 elemento por fila en pantallas muy pequeñas */
+        max-width: 100%;
+    }
+}
+
+
+
+.silver-container:hover {    
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+        url('../recursos/Home/Confian/Silver/SilverFondo.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.iuva-container:hover {    
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+        url('../recursos/Home/Confian/Iuva/IuvaFondo.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.plan50-container:hover {    
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+        url('../recursos/Home/Confian/50plan/50Plan.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.houseClub-container:hover {    
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+        url('../recursos/Home/Confian/HouseClub/HouseClub.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.toyCars-container:hover {    
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+        url('../recursos/Home/Confian/ToyCars/ToyCars.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.mumma-container:hover {    
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+        url('../recursos/Home/Confian/Mumma/Mumma.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.vendenos-container:hover {    
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+        url('../recursos/Home/Confian/Vendenos/Vendenos.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.informacion-redes {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 50px 0;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.sublogo {
+    color: #C57C21;
+    font-size: 1.2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.mapa {
+    height: 150px;
+    background-color: #333;
+    margin-top: 20px;
+}
+
+.enlaces-legales {
+    list-style-type: none;
+    padding: 0;
+}
+
+.enlaces-legales li {
+    margin-bottom: 10px;
+}
+
+.enlaces-legales a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.redes-sociales {
+    margin-top: 20px;
+    margin-bottom: 60px; /* Añade un poco de espacio debajo de las redes sociales */
+}
+
+.red-social {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background-color: #C57C21;
+    border-radius: 50%;
+}
+
+.copyright {
+    margin-top: 20px; /* Ajusta este valor para controlar la distancia desde las redes sociales */
+    font-size: 0.9rem;
+    color: #888; /* Ajusta el color según tu diseño */
+    margin-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+    .copyright {
+        margin-top: 15px;
+        font-size: 0.8rem;
+    }
+    
+    .redes-sociales {
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+}
+
+.footer-left {
+    padding-left: 15%; /* Ajusta este valor según necesites */
+}
+
+@media (max-width: 1200px) {
+    .footer-left {
+        padding-left: 10%; /* Reduce el padding en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 992px) {
+    .footer-left {
+        padding-left: 5%; /* Reduce aún más el padding en pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-left {
+        padding-left: 0; /* Elimina el padding en pantallas móviles */
+    }
 }
