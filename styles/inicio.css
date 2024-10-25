@@ -484,20 +484,30 @@ body {
 }
 
 .informacion-redes {
-    background-color: #1a1a1a;
-    color: #ffffff;
+    background-image: url('../recursos/Footer/Degradado_fondo_footer.svg');
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 50px 0;
+    color: #ffffff; /* Asegúrate de que el texto sea visible sobre el fondo */
 }
 
-.logo {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 0;
+/* Agrega estos nuevos estilos */
+.logo-container {
+    margin-bottom: 20px; /* Ajusta según sea necesario */
 }
 
-.sublogo {
-    color: #C57C21;
-    font-size: 1.2rem;
+.footer-logo {
+    max-width: 150px; /* Ajusta el tamaño según tus necesidades */
+    height: auto;
+}
+
+/* Si necesitas hacer el logo responsive, puedes agregar media queries */
+@media (max-width: 768px) {
+    .footer-logo {
+        max-width: 120px; /* Tamaño más pequeño para pantallas móviles */
+    }
 }
 
 h3 {
@@ -505,10 +515,31 @@ h3 {
     margin-bottom: 20px;
 }
 
-.mapa {
-    height: 150px;
-    background-color: #333;
-    margin-top: 20px;
+.mapa-container {
+    overflow: hidden;
+    max-width: 100%;
+    height: 200px; /* Ajusta según tus necesidades */
+    margin-top: 20px; /* Añade un poco de espacio arriba del mapa */
+}
+
+.mapa-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.mapa-container:hover .mapa-imagen {
+    transform: scale(1.1); /* Ajusta el valor para más o menos zoom */
+}
+.col-md-4.offset-md-2 {
+    margin-left: 12.5%; /* Ajusta este valor según necesites */
+}
+
+@media (max-width: 768px) {
+    .col-md-4.offset-md-2 {
+        margin-left: 0; /* Elimina el margen en pantallas pequeñas */
+    }
 }
 
 .enlaces-legales {
@@ -521,22 +552,62 @@ h3 {
 }
 
 .enlaces-legales a {
-    color: #ffffff;
+    color: #888;
     text-decoration: none;
 }
 
 .redes-sociales {
-    margin-top: 20px;
+    margin-top: 50px;
     margin-bottom: 60px; /* Añade un poco de espacio debajo de las redes sociales */
 }
 
 .red-social {
     display: inline-block;
-    width: 30px;
-    height: 30px;
+    width: 40px; /* Ajusta según el tamaño deseado */
+    height: 40px; /* Ajusta según el tamaño deseado */
     margin-right: 10px;
-    background-color: #C57C21;
-    border-radius: 50%;
+    background-color: transparent;
+    transition: transform 0.3s ease;
+}
+
+.red-social:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos específicos para cada red social */
+.red-social.facebook {
+    background-image: url('../recursos/Footer/facebook_dorado.svg');
+    background-size: contain; /* Asegura que la imagen se ajuste dentro del contenedor */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.red-social.instagram {
+    background-image: url('../recursos/Footer/instagram_dorado.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.red-social.linkedin {
+    background-image: url('../recursos/Footer/linkedin_dorado.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.red-social.whatsapp {
+    background-image: url('../recursos/Footer/whatsapp.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.red-social.email {
+    background-image: url('../recursos/Footer/mail_dorado.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .copyright {
@@ -579,3 +650,11 @@ h3 {
         padding-left: 0; /* Elimina el padding en pantallas móviles */
     }
 }
+
+
+
+
+
+
+
+

@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.baskervville-regular {
+    font-family: "Baskervville", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.baskervville-regular-italic {
+    font-family: "Baskervville", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.montserrat-regular {
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color:transparent;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    font-size: 35px;
+    font-family: "Baskervville", serif;
+    padding: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navbar-brand {
+    position: relative;
+    display: inline-block;
+}
+
+.navbar-brand::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('C:/MummaProjects/Mummaview/mummaView/recursos/NavBar/Degradado_fondo_M.svg');
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.navbar-brand:hover::before {
+    opacity: 1;
+}
+
+.navbar-brand img {
+    height: 80px;
+    width: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.navbar-nav .nav-item {
+    position: relative;
+    padding: 0 10px;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    transform: translateX(0);
+}
+
+.navbar .btn-outline-light {
+    color: #ffffff;
+    border-color: #ffffff;
+    border-width: 2px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.navbar .btn-outline-light::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-image: url('../recursos/NavBar/Brillo_dorado.svg');
+    background-size: cover;
+    background-position: center;
+    transition: left 0.3s ease;
+}
+
+.navbar .btn-outline-light:hover::before {
+    left: 100%;
+}
+
+.navbar .btn-outline-light:hover {
+    color: #C57C21;
+    background-color: transparent;
+    border-color: #C57C21;
+}
+
+
+
+
+.informacion-redes {
+    background-image: url('../recursos/Footer/Degradado_fondo_footer.svg');
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 0;
+    color: #ffffff; /* Asegúrate de que el texto sea visible sobre el fondo */
+}
+
+/* Agrega estos nuevos estilos */
+.logo-container {
+    margin-bottom: 20px; /* Ajusta según sea necesario */
+}
+
+.footer-logo {
+    max-width: 150px; /* Ajusta el tamaño según tus necesidades */
+    height: auto;
+}
+
+/* Si necesitas hacer el logo responsive, puedes agregar media queries */
+@media (max-width: 768px) {
+    .footer-logo {
+        max-width: 120px; /* Tamaño más pequeño para pantallas móviles */
+    }
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.mapa-container {
+    overflow: hidden;
+    max-width: 100%;
+    height: 200px; /* Ajusta según tus necesidades */
+    margin-top: 20px; /* Añade un poco de espacio arriba del mapa */
+}
+
+.mapa-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.mapa-container:hover .mapa-imagen {
+    transform: scale(1.1); /* Ajusta el valor para más o menos zoom */
+}
+.col-md-4.offset-md-2 {
+    margin-left: 12.5%; /* Ajusta este valor según necesites */
+}
+
+@media (max-width: 768px) {
+    .col-md-4.offset-md-2 {
+        margin-left: 0; /* Elimina el margen en pantallas pequeñas */
+    }
+}
+
+.enlaces-legales {
+    list-style-type: none;
+    padding: 0;
+}
+
+.enlaces-legales li {
+    margin-bottom: 10px;
+}
+
+.enlaces-legales a {
+    color: #888;
+    text-decoration: none;
+}
+
+.redes-sociales {
+    margin-top: 50px;
+    margin-bottom: 60px; /* Añade un poco de espacio debajo de las redes sociales */
+}
+
+.red-social {
+    display: inline-block;
+    width: 40px; /* Ajusta según el tamaño deseado */
+    height: 40px; /* Ajusta según el tamaño deseado */
+    margin-right: 10px;
+    background-color: transparent;
+    transition: transform 0.3s ease;
+}
+
+.red-social:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos específicos para cada red social */
+.red-social.facebook {
+    background-image: url('../recursos/Footer/facebook_dorado.svg');
+    background-size: contain; /* Asegura que la imagen se ajuste dentro del contenedor */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.red-social.instagram {
+    background-image: url('../recursos/Footer/instagram_dorado.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.red-social.linkedin {
+    background-image: url('../recursos/Footer/linkedin_dorado.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.red-social.whatsapp {
+    background-image: url('../recursos/Footer/whatsapp.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.red-social.email {
+    background-image: url('../recursos/Footer/mail_dorado.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.copyright {
+    margin-top: 20px; /* Ajusta este valor para controlar la distancia desde las redes sociales */
+    font-size: 0.9rem;
+    color: #888; /* Ajusta el color según tu diseño */
+    margin-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+    .copyright {
+        margin-top: 15px;
+        font-size: 0.8rem;
+    }
+    
+    .redes-sociales {
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+}
+
+.footer-left {
+    padding-left: 15%; /* Ajusta este valor según necesites */
+}
+
+@media (max-width: 1200px) {
+    .footer-left {
+        padding-left: 10%; /* Reduce el padding en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 992px) {
+    .footer-left {
+        padding-left: 5%; /* Reduce aún más el padding en pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-left {
+        padding-left: 0; /* Elimina el padding en pantallas móviles */
+    }
+}
+
+
+
+
+
+
+
+
