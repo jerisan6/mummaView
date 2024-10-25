@@ -52,7 +52,7 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     font-size: 35px;
@@ -207,28 +207,21 @@ body {
 }
 
 .servicios-preview {
-    background-image: url('../recursos/Fondo de títulos-opacidad75.png');
     background-color: black;
+    background-image: url('../recursos/Fondo de títulos-opacidad75.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 100px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.servicios-preview .servicios-content {
+    padding: 50px 0;
     text-align: center;
 }
 
 .servicios-preview h2 {
     color: #ffffff; /* Ajusta el color del texto según sea necesario */
-    font-family: "Baskervville", serif;
     font-size: 3rem;
-    margin: 0;
+    margin-bottom: 30px;
+    font-family: "Baskervville", serif;
 }
-
 .image-section {
     position: relative;
     display: flex;
@@ -329,27 +322,4 @@ body {
         url('../recursos/Home/Integracion/Integracion.jpg');
     background-size: cover;
     background-position: center;
-}
-
-.services-section.define-section {
-    background-image: url('../recursos/Fondo de títulos-opacidad75.png');
-    background-color: black;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 100px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.services-section.define-section .services-content {
-    text-align: center;
-}
-
-.services-section.define-section h2 {
-    color: #ffffff; /* Ajusta el color del texto según sea necesario */
-    font-family: "Baskervville", serif;
-    font-size: 3rem;
-    margin: 0;
 }
