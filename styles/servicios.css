@@ -23,6 +23,9 @@
     position: relative;
     height: 100vh;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .video-background {
@@ -327,10 +330,107 @@ h3 {
     }
 }
 
+/* AQUI IRA EL CODIGO DE CADA SECCION DE LA WEB */
 
+/* Estilos para el texto a la derecha */
+.texto-derecha {
+    position: relative;
+    z-index: 1;
+    padding-right: 5%; /* Ajusta este valor según necesites */
+    text-align: right;
+    color: #ffffff; /* Asegúrate de que el texto sea visible sobre el video */
+}
 
+.texto-derecha h1 {
+    font-family: "Baskervville", serif;
+    font-size: 2.5rem; /* Ajusta el tamaño según tus necesidades */
+    margin-bottom: 0.5rem; /* Espacio entre líneas */
+    line-height: 1.2; /* Ajusta el espaciado entre líneas */
+}
 
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .texto-derecha {
+        padding-right: 3%;
+    }
 
+    .texto-derecha h1 {
+        font-size: 1.8rem;
+    }
+}
 
+/* Estilos para las secciones de imagen */
+.image-section {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
 
+.image-section.transformacion {
+    background-image: url('../recursos/Servicios/Fondos/transformacion.jpg');
+}
+.image-section.consultoria {
+    background-image: url('../recursos/Servicios/Fondos/consultoria.jpg');
+}
 
+.image-section.desarrollo {
+    background-image: url('../recursos/Servicios/Fondos/desarrollo.jpg');
+}
+
+.image-section.ciberseguridad {
+    background-image: url('../recursos/Servicios/Fondos/ciberseguridad.jpg');
+}
+
+.image-section.marketing {
+    background-image: url('../recursos/Servicios/Fondos/estrategia.jpg');
+}
+
+.image-section.integracion {
+    background-image: url('../recursos/Servicios/Fondos/integracion.jpg');
+}
+
+.service-icon {
+    flex: 0 0 100px; /* Ajusta este valor según el tamaño deseado del icono */
+    margin-right: 30px;
+}
+
+.service-icon img {
+    width: 100%;
+    height: auto;
+}
+
+.service-content {
+    flex: 1;
+}
+
+.service-text {
+    font-family: "Baskervville", serif;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.service-description {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .image-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-icon {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .service-text {
+        font-size: 1.5rem;
+    }
+}
