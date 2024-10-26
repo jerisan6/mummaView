@@ -336,14 +336,19 @@ h3 {
 .texto-derecha {
     position: relative;
     z-index: 1;
-    padding-right: 5%; /* Ajusta este valor según necesites */
+    padding-right: 10%; /* Ajusta este valor según necesites */
+    padding-bottom: 15%; /* Añadido para mover el texto más abajo */
     text-align: right;
     color: #ffffff; /* Asegúrate de que el texto sea visible sobre el video */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Alinea el contenido al final del contenedor */
+    height: 100%; /* Asegura que el contenedor ocupe toda la altura disponible */
 }
 
 .texto-derecha h1 {
     font-family: "Baskervville", serif;
-    font-size: 2.5rem; /* Ajusta el tamaño según tus necesidades */
+    font-size: 3.5rem; /* Ajusta el tamaño según tus necesidades */
     margin-bottom: 0.5rem; /* Espacio entre líneas */
     line-height: 1.2; /* Ajusta el espaciado entre líneas */
 }
@@ -351,86 +356,220 @@ h3 {
 /* Media query para pantallas más pequeñas */
 @media (max-width: 768px) {
     .texto-derecha {
-        padding-right: 3%;
+        padding-right: 5%;
+        padding-bottom: 5%;
     }
 
     .texto-derecha h1 {
-        font-size: 1.8rem;
+        font-size: 2.5rem;
     }
 }
 
 /* Estilos para las secciones de imagen */
 .image-section {
-    display: flex;
-    align-items: center;
-    padding: 50px;
-    background-size: cover;
+    position: relative;
+    background-size: 110% auto;
     background-position: center;
+    transition: background-position 0.3s ease;
+    overflow: hidden;
+}
+
+/* Secciones alineadas a la derecha */
+.image-section.right-aligned {
+    text-align: right;
+}
+
+.image-section.right-aligned:hover {
+    background-position: 40% center;
+}
+
+.image-section.right-aligned .service-description-right {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.7;
+}
+
+.image-section.right-aligned:hover .service-description-right {
+    transform: translateX(-5px);
+    opacity: 1;
+}
+
+/* Secciones alineadas a la izquierda */
+.image-section.left-aligned {
+    text-align: left;
+}
+
+.image-section.left-aligned:hover {
+    background-position: 60% center;
+}
+
+.image-section.left-aligned .service-description-left {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.7;
+}
+
+.image-section.left-aligned:hover .service-description-left {
+    transform: translateX(5px);
+    opacity: 1;
+}
+
+/* Asegúrate de que las imágenes de fondo estén correctamente definidas */
+.image-section.transformacion {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+    url('../recursos/Servicios/Fondos/transformacion.jpg');
+}
+.image-section.consultoria {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+    url('../recursos/Servicios/Fondos/consultoria.jpg');
+}
+.image-section.desarrollo {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+    url('../recursos/Servicios/Fondos/desarrollo.jpg');
+}
+.image-section.ciberseguridad {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+    url('../recursos/Servicios/Fondos/ciberseguridad.jpg');
+}
+.image-section.estrategia {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+    url('../recursos/Servicios/Fondos/estrategia.jpg');
+}
+.image-section.integracion {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+    url('../recursos/Servicios/Fondos/integracion.jpg');
+}
+
+
+
+.service-text-right, .service-text-left {
+    font-family: "Montserrat", serif;
+    font-size: 3.5rem; /* Aumentado el tamaño de la fuente */
+    line-height: 1.2;
+    margin-bottom: 20px; /* Espaciado entre el título y la descripción */
     color: #ffffff;
 }
 
-.image-section.transformacion {
-    background-image: url('../recursos/Servicios/Fondos/transformacion.jpg');
-}
-.image-section.consultoria {
-    background-image: url('../recursos/Servicios/Fondos/consultoria.jpg');
-}
-
-.image-section.desarrollo {
-    background-image: url('../recursos/Servicios/Fondos/desarrollo.jpg');
-}
-
-.image-section.ciberseguridad {
-    background-image: url('../recursos/Servicios/Fondos/ciberseguridad.jpg');
-}
-
-.image-section.marketing {
-    background-image: url('../recursos/Servicios/Fondos/estrategia.jpg');
-}
-
-.image-section.integracion {
-    background-image: url('../recursos/Servicios/Fondos/integracion.jpg');
-}
-
-.service-icon {
-    flex: 0 0 100px; /* Ajusta este valor según el tamaño deseado del icono */
-    margin-right: 30px;
-}
-
-.service-icon img {
-    width: 100%;
-    height: auto;
-}
-
-.service-content {
-    flex: 1;
-}
-
-.service-text {
-    font-family: "Baskervville", serif;
-    font-size: 2rem;
-    margin-bottom: 15px;
-}
-
-.service-description {
+.service-description-right, .service-description-left {
     font-family: "Montserrat", sans-serif;
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 1.2rem; /* Aumentado el tamaño de la fuente */
+    line-height: 1.6;
+    color: #8e9091;
+    text-align: justify;
 }
 
 /* Media query para pantallas más pequeñas */
+@media (max-width: 1200px) {
+    .image-section.left-aligned, .image-section.right-aligned {
+        padding: 50px 50px 50px 5%; /* Ajustado para pantallas medianas */
+    }
+    
+    .service-content-left, .service-content-right {
+        flex: 0 1 60%; /* Aumentado ligeramente para pantallas medianas */
+    }
+}
+
 @media (max-width: 768px) {
-    .image-section {
+    .image-section.left-aligned, .image-section.right-aligned {
         flex-direction: column;
+        align-items: center;
         text-align: center;
+        padding: 50px; /* Padding uniforme para móviles */
     }
 
-    .service-icon {
+    .service-icon-left, .service-icon-right {
         margin-right: 0;
         margin-bottom: 20px;
     }
 
-    .service-text {
-        font-size: 1.5rem;
+    .service-content-left, .service-content-right {
+        align-items: center;
+        flex: 0 1 100%;
+    }
+
+    .service-text-left, .service-text-right  {
+        font-size: 2.5rem;
+    }
+
+    .service-description-left, .service-description-right {
+        font-size: 1.1rem;
     }
 }
+
+.image-section.transformacion.right-aligned:hover,
+.image-section.desarrollo.right-aligned:hover,
+.image-section.estrategia.right-aligned:hover {
+    background-position: 65% center;
+}
+
+.image-section.right-aligned .service-description-right {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.7;
+}
+
+.image-section.right-aligned:hover .service-description-right {
+    transform: translateX(-5px);
+    opacity: 1;
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .image-section.transformacion 
+    .image-section.desarrollo,
+    .image-section.estrategia {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .image-section.transformacion.right-aligned:hover 
+    .image-section.desarrollo.right-aligned:hover 
+    .image-section.estrategia.right-aligned:hover {
+        background-position: center;
+    }
+
+    .image-section.transformacion.right-aligned:hover .service-description-right,
+    .image-section.desarrollo.right-aligned:hover .service-description-right,
+    .image-section.estrategia.right-aligned:hover .service-description-right {
+        transform: none;
+    }
+}
+
+
+/* Secciones alineadas a la izquierda */
+.image-section.consultoria.left-aligned:hover,
+.image-section.ciberseguridad.left-aligned:hover,
+.image-section.integracion.left-aligned:hover {
+    background-position: 25% center; /* Cambiado para mover el fondo en la dirección opuesta */
+}
+
+.image-section.left-aligned .service-description-left {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.7;
+}
+
+.image-section.left-aligned:hover .service-description-left {
+    transform: translateX(5px);
+    opacity: 1;
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .image-section.consultoria,
+    .image-section.ciberseguridad,
+    .image-section.integracion {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .image-section.consultoria.left-aligned:hover,
+    .image-section.ciberseguridad.left-aligned:hover,
+    .image-section.integracion.left-aligned:hover {
+        background-position: center;
+    }
+
+    .image-section.consultoria.left-aligned:hover .service-description-left,
+    .image-section.ciberseguridad.left-aligned:hover .service-description-left,
+    .image-section.integracion.left-aligned:hover .service-description-left {
+        transform: none;
+    }
+}
+
+
