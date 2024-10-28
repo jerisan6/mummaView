@@ -319,6 +319,7 @@ h3 {
     transition: background-position 0.3s ease;
     overflow: hidden;
 }
+
 .image-section::before,
 .image-section::after {
     content: '';
@@ -328,6 +329,7 @@ h3 {
     height: 100px; /* Altura del degradado */
     z-index: 1;
 }
+
 .image-section::before {
     top: 0;
     background: linear-gradient(
@@ -352,7 +354,7 @@ h3 {
     justify-content: flex-end;
     align-items: center;
     gap: 20px; /* Espacio entre el contenido y el icono */
-    padding: 20px 5% 20px 10%; /* top right bottom left */
+    padding: 20px 5% 20px 5%; /* Aumentado el padding izquierdo de 10% a 15% */
 }
 .service-text-right, .service-text-left {
     position: relative; /* Añadido para mantener el contexto de apilamiento */
@@ -449,30 +451,44 @@ h3 {
     color: #ffffff;
     text-align: justify;
 }
-.service-content-right {
+.service-content-right{
     max-width: 60%; /* Reduce el ancho del contenedor */
     margin-left: auto; /* Empuja el contenido hacia la derecha */
-    margin-right: 3%; /* Aumentado de 5% a 10% para mover más a la derecha */
+    margin-right: 5%; /* Aumentado de 5% a 10% para mover más a la derecha */
 }
 
 .service-content-left {
-    max-width: 60%; /* Reduce el ancho del contenedor */
-    margin-right: auto; /* Empuja el contenido hacia la izquierda */
-    margin-left: 5%; /* Reducido de 15% a 5% para tener la misma separación que el lado derecho */
+    max-width: 60%;
+    margin-right: auto;
+    margin-left: 5%; /* Modificado: aumentado el margen izquierdo a 15% */
 }
 .service-description-right {
     max-width: 400px;
     margin-left: auto;
     text-align: right;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
+    text-align: justify;
 }
 .service-description-left {
     max-width: 400px;
     text-align: left; /* Alinear el texto a la izquierda */
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
+    text-align: justify;
 }
+.service-icon-left {
+    margin-left: 7%; /* Añade margen a la izquierda */
+    display: flex; /* Asegura que la imagen se mantenga alineada */
+    align-items: center;
+}
+
+/* Si necesitas ajustar el tamaño del icono, también puedes añadir: */
+.service-icon-left img {
+    width: auto; /* o un tamaño específico como 100px */
+    height: auto;
+}
+
 /* Secciones alineadas a la derecha */
 .image-section.transformacion.right-aligned:hover,
 .image-section.desarrollo.right-aligned:hover,
@@ -623,10 +639,6 @@ h3 {
         padding: 50px; /* Padding uniforme para móviles */
     }
 
-    .service-icon-left, .service-icon-right {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
 
     .service-content-left, .service-content-right {
         align-items: center;
@@ -655,15 +667,6 @@ h3 {
         padding: 15px;
     }
 
-    .service-icon-left,
-    .service-icon-right {
-        width: 60px;
-        height: 60px;
-        margin: 0 auto 20px;
-        position: relative;
-        top: 0;
-        z-index: 2;
-    }
     .footer-left {
         padding-left: 5%; /* Reduce aún más el padding en pantallas medianas */
     }
@@ -681,6 +684,16 @@ h3 {
     }
     .footer-logo {
         max-width: 120px; /* Tamaño más pequeño para pantallas móviles */
+    }
+    .service-icon-left {
+        margin-left: 0; /* Elimina el margen lateral */
+        justify-content: center; /* Centra el icono horizontalmente */
+        width: 100%; /* Asegura que tome todo el ancho disponible */
+        margin-bottom: 20px; /* Añade espacio entre el icono y el contenido */
+    }
+
+    .service-icon-left img {
+        margin: 0 auto; /* Centra la imagen */
     }
 }
 
@@ -711,11 +724,6 @@ h3 {
         padding: 10px;
     }
 
-    .service-icon-left,
-    .service-icon-right {
-        width: 50px;
-        height: 50px;
-    }
 }
 
 /* Para pantallas muy altas (como tablets en vertical) */
