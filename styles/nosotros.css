@@ -328,9 +328,100 @@ h3 {
 }
 
 
+/* AQUI IRA EL CODIGO DE CADA SECCION DE LA WEB */
+.texto-derecha {
+    position: relative;
+    z-index: 1;
+    padding-right: 10%;
+    padding-bottom: 15%;
+    text-align: right;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+}
 
+.texto-derecha h1 {
+    font-family: "Baskervville", serif;
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
 
+@media (max-width: 768px) {
+    .texto-derecha {
+        padding-right: 5%;
+        padding-bottom: 5%;
+    }
 
+    .texto-derecha h1 {
+        font-size: 2.5rem;
+    }
+}
 
+/* Estilos para las secciones de valores */
+.image-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px; /* Aumentamos el padding para dar espacio a los degradados */
+    background-image: url('../recursos/Nosotros/Fondo/Nosotros_fondo.svg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
+/* Degradado superior */
+.image-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px; /* Altura del degradado */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
+}
 
+/* Degradado inferior */
+.image-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px; /* Altura del degradado */
+    background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+}
+
+/* Aseguramos que el contenido esté por encima de los degradados */
+.service-title, .moneda-img, .service-description {
+    position: relative;
+    z-index: 1;
+}
+
+.service-title {
+    font-family: "Baskervville", serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.service-description {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: "Montserrat", serif;
+    line-height: 1.6;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .moneda-img {
+        max-width: 200px;
+    }
+    
+    .service-title {
+        font-size: 1.5rem;
+    }
+}
