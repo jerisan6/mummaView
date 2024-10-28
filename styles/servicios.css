@@ -182,13 +182,6 @@ body {
     height: auto;
 }
 
-/* Si necesitas hacer el logo responsive, puedes agregar media queries */
-@media (max-width: 768px) {
-    .footer-logo {
-        max-width: 120px; /* Tamaño más pequeño para pantallas móviles */
-    }
-}
-
 h3 {
     font-size: 1.5rem;
     margin-bottom: 20px;
@@ -213,12 +206,6 @@ h3 {
 }
 .col-md-4.offset-md-2 {
     margin-left: 12.5%; /* Ajusta este valor según necesites */
-}
-
-@media (max-width: 768px) {
-    .col-md-4.offset-md-2 {
-        margin-left: 0; /* Elimina el margen en pantallas pequeñas */
-    }
 }
 
 .enlaces-legales {
@@ -296,38 +283,8 @@ h3 {
     margin-bottom: 60px;
 }
 
-@media (max-width: 768px) {
-    .copyright {
-        margin-top: 15px;
-        font-size: 0.8rem;
-    }
-    
-    .redes-sociales {
-        margin-top: 15px;
-        margin-bottom: 20px;
-    }
-}
-
 .footer-left {
     padding-left: 15%; /* Ajusta este valor según necesites */
-}
-
-@media (max-width: 1200px) {
-    .footer-left {
-        padding-left: 10%; /* Reduce el padding en pantallas más pequeñas */
-    }
-}
-
-@media (max-width: 992px) {
-    .footer-left {
-        padding-left: 5%; /* Reduce aún más el padding en pantallas medianas */
-    }
-}
-
-@media (max-width: 768px) {
-    .footer-left {
-        padding-left: 0; /* Elimina el padding en pantallas móviles */
-    }
 }
 
 /* AQUI IRA EL CODIGO DE CADA SECCION DE LA WEB */
@@ -353,18 +310,6 @@ h3 {
     line-height: 1.2; /* Ajusta el espaciado entre líneas */
 }
 
-/* Media query para pantallas más pequeñas */
-@media (max-width: 768px) {
-    .texto-derecha {
-        padding-right: 5%;
-        padding-bottom: 5%;
-    }
-
-    .texto-derecha h1 {
-        font-size: 2.5rem;
-    }
-}
-
 /* Estilos para las secciones de imagen */
 .image-section {
     position: relative;
@@ -377,12 +322,28 @@ h3 {
 /* Secciones alineadas a la derecha */
 .image-section.right-aligned {
     text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px; /* Espacio entre el contenido y el icono */
+    padding: 20px 5% 20px 10%; /* top right bottom left */
+}
+.service-text-right, .service-icon-right {
+    position: relative; /* Añadido para mantener el contexto de apilamiento */
+    z-index: 1; /* Asegura que el texto esté por encima */
 }
 
+.service-icon-right {
+    position: relative;
+    top: -300px; /* Ajustado para alinear con el título */
+    margin-right: 20px; /* Espacio entre el icono y el texto */
+}
 .image-section.right-aligned:hover {
     background-position: 40% center;
 }
-
+.image-section.left-aligned:hover {
+    background-position: 60% center;
+}
 .image-section.right-aligned .service-description-right {
     transition: transform 0.3s ease, opacity 0.3s ease;
     opacity: 0.7;
@@ -396,10 +357,11 @@ h3 {
 /* Secciones alineadas a la izquierda */
 .image-section.left-aligned {
     text-align: left;
-}
-
-.image-section.left-aligned:hover {
-    background-position: 60% center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 10% 20px 5%; /* top right bottom left */
 }
 
 .image-section.left-aligned .service-description-left {
@@ -438,8 +400,6 @@ h3 {
     url('../recursos/Servicios/Fondos/integracion.jpg');
 }
 
-
-
 .service-text-right, .service-text-left {
     font-family: "Montserrat", serif;
     font-size: 3.5rem; /* Aumentado el tamaño de la fuente */
@@ -455,45 +415,30 @@ h3 {
     color: #8e9091;
     text-align: justify;
 }
-
-/* Media query para pantallas más pequeñas */
-@media (max-width: 1200px) {
-    .image-section.left-aligned, .image-section.right-aligned {
-        padding: 50px 50px 50px 5%; /* Ajustado para pantallas medianas */
-    }
-    
-    .service-content-left, .service-content-right {
-        flex: 0 1 60%; /* Aumentado ligeramente para pantallas medianas */
-    }
+.service-content-right {
+    max-width: 60%; /* Reduce el ancho del contenedor */
+    margin-left: auto; /* Empuja el contenido hacia la derecha */
+    margin-right: 3%; /* Aumentado de 5% a 10% para mover más a la derecha */
 }
-
-@media (max-width: 768px) {
-    .image-section.left-aligned, .image-section.right-aligned {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 50px; /* Padding uniforme para móviles */
-    }
-
-    .service-icon-left, .service-icon-right {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    .service-content-left, .service-content-right {
-        align-items: center;
-        flex: 0 1 100%;
-    }
-
-    .service-text-left, .service-text-right  {
-        font-size: 2.5rem;
-    }
-
-    .service-description-left, .service-description-right {
-        font-size: 1.1rem;
-    }
+.service-content-left {
+    max-width: 60%; /* Reduce el ancho del contenedor */
+    margin-right: auto; /* Empuja el contenido hacia la izquierda */
+    margin-left: 5%; /* Reducido de 15% a 5% para tener la misma separación que el lado derecho */
 }
-
+.service-description-right {
+    max-width: 400px;
+    margin-left: auto;
+    text-align: right;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.service-description-left {
+    max-width: 400px;
+    text-align: left; /* Alinear el texto a la izquierda */
+    font-size: 14px;
+    line-height: 1.5;
+}
+/* Secciones alineadas a la derecha */
 .image-section.transformacion.right-aligned:hover,
 .image-section.desarrollo.right-aligned:hover,
 .image-section.estrategia.right-aligned:hover {
@@ -509,30 +454,6 @@ h3 {
     transform: translateX(-5px);
     opacity: 1;
 }
-
-/* Media query para pantallas más pequeñas */
-@media (max-width: 768px) {
-    .image-section.transformacion 
-    .image-section.desarrollo,
-    .image-section.estrategia {
-        background-size: cover;
-        background-position: center;
-    }
-
-    .image-section.transformacion.right-aligned:hover 
-    .image-section.desarrollo.right-aligned:hover 
-    .image-section.estrategia.right-aligned:hover {
-        background-position: center;
-    }
-
-    .image-section.transformacion.right-aligned:hover .service-description-right,
-    .image-section.desarrollo.right-aligned:hover .service-description-right,
-    .image-section.estrategia.right-aligned:hover .service-description-right {
-        transform: none;
-    }
-}
-
-
 /* Secciones alineadas a la izquierda */
 .image-section.consultoria.left-aligned:hover,
 .image-section.ciberseguridad.left-aligned:hover,
@@ -570,6 +491,113 @@ h3 {
     .image-section.integracion.left-aligned:hover .service-description-left {
         transform: none;
     }
+    .image-section.transformacion 
+    .image-section.desarrollo,
+    .image-section.estrategia {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .image-section.transformacion.right-aligned:hover 
+    .image-section.desarrollo.right-aligned:hover 
+    .image-section.estrategia.right-aligned:hover {
+        background-position: center;
+    }
+
+    .image-section.transformacion.right-aligned:hover .service-description-right,
+    .image-section.desarrollo.right-aligned:hover .service-description-right,
+    .image-section.estrategia.right-aligned:hover .service-description-right {
+        transform: none;
+    }
+    .image-section.left-aligned, .image-section.right-aligned {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 50px; /* Padding uniforme para móviles */
+    }
+
+    .service-icon-left, .service-icon-right {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .service-content-left, .service-content-right {
+        align-items: center;
+        flex: 0 1 100%;
+        max-width: 100%;
+        margin: 0 auto; /* Centra el contenedor en móviles */
+    }
+    .service-text-left, .service-text-right  {
+        font-size: 2.5rem;
+    }
+
+    .service-description-left, .service-description-right {
+        font-size: 1.1rem;
+        text-align: justify;
+    }
+    .texto-derecha {
+        padding-right: 5%;
+        padding-bottom: 5%;
+    }
+
+    .texto-derecha h1 {
+        font-size: 2.5rem;
+    }
+    .footer-left {
+        padding-left: 0; /* Elimina el padding en pantallas móviles */
+    }
+    .copyright {
+        margin-top: 15px;
+        font-size: 0.8rem;
+    }
+    
+    .redes-sociales {
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+    .col-md-4.offset-md-2 {
+        margin-left: 0; /* Elimina el margen en pantallas pequeñas */
+    }
+    .footer-logo {
+        max-width: 120px; /* Tamaño más pequeño para pantallas móviles */
+    }
 }
+
+@media (max-width: 992px) {
+    .footer-left {
+        padding-left: 5%; /* Reduce aún más el padding en pantallas medianas */
+    }
+}
+
+@media (max-width: 1200px) {
+    .image-section.left-aligned, .image-section.right-aligned {
+        padding: 50px 50px 50px 5%; /* Ajustado para pantallas medianas */
+    }
+    
+    .service-content-left, .service-content-right {
+        max-width: 100%;
+        margin: 0 auto; /* Centra el contenedor en móviles */
+    }
+    .service-description-right {
+        max-width: 300px;
+        margin: 0 auto; /* Centra la descripción */
+        text-align: center; /* Centra el texto */
+        padding: 0 20px; /* Añade algo de padding en los lados */
+    }
+
+    .image-section.right-aligned {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        align-items: center; /* Centra los elementos */
+        text-align: center;
+    }
+
+    .service-text-right {
+        text-align: center; /* Centra el título también */
+    }
+    .footer-left {
+        padding-left: 10%; /* Reduce el padding en pantallas más pequeñas */
+    }
+}
+
 
 
