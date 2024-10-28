@@ -349,6 +349,88 @@ h3 {
     line-height: 1.2;
 }
 
+/* Estilos para las secciones de valores */
+.image-section {
+    position: relative;
+    overflow: hidden;
+    background-image: url('../recursos/Nosotros/Fondo/Nosotros_fondo.svg');
+    padding: 100px 0;
+}
+
+.image-section .service-title,
+.image-section .service-description {
+    transition: transform 0.5s ease;
+}
+
+.image-section:hover .service-title {
+    transform: translateX(-20px);
+}
+
+.image-section:hover .service-description {
+    transform: translateX(20px);
+}
+
+/* Degradado superior */
+.image-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 150px; /* Aumenta la altura del degradado superior */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+    z-index: 1;
+}
+
+/* Degradado inferior */
+.image-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px; /* Aumenta la altura del degradado inferior */
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    z-index: 1;
+}
+
+.service-title {
+    font-family: "Baskervville", serif;
+    font-size: 2rem;
+    color: white;
+}
+
+.service-description {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: "Montserrat", serif;
+    line-height: 1.6;
+    color: white;
+}
+
+.moneda-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.moneda-img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .moneda-img {
+        max-width: 200px;
+    }
+    
+    .service-title {
+        font-size: 1.5rem;
+    }
+}
+
 @media (max-width: 768px) {
     .texto-derecha {
         padding-right: 5%;
@@ -360,68 +442,61 @@ h3 {
     }
 }
 
-/* Estilos para las secciones de valores */
-.image-section {
-    position: relative;
+.content-layout {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 100px 20px; /* Aumentamos el padding para dar espacio a los degradados */
-    background-image: url('../recursos/Nosotros/Fondo/Nosotros_fondo.svg');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-/* Degradado superior */
-.image-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 50px; /* Altura del degradado */
-    background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
-}
-
-/* Degradado inferior */
-.image-section::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 50px; /* Altura del degradado */
-    background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
-}
-
-/* Aseguramos que el contenido esté por encima de los degradados */
-.service-title, .moneda-img, .service-description {
-    position: relative;
-    z-index: 1;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 100px 10%;
+    width: 100%;
 }
 
 .service-title {
-    font-family: "Baskervville", serif;
-    font-size: 2rem;
-    margin-bottom: 20px;
+    color: white;
+    font-size: 2.5rem;
+    max-width: 40%;
+    text-align: left;
+    margin-top: 50px; /* Ajusta según necesites */
+}
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 40%;
+}
+
+.moneda-img {
+    height: 150px;
+    width: auto;
+    margin-bottom: 30px;
 }
 
 .service-description {
-    max-width: 600px;
-    margin: 0 auto;
-    font-family: "Montserrat", serif;
-    line-height: 1.6;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
 }
 
-/* Estilos responsivos */
+/* Responsive */
 @media (max-width: 768px) {
-    .moneda-img {
-        max-width: 200px;
+    .content-layout {
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 5%;
     }
-    
+
     .service-title {
-        font-size: 1.5rem;
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 1.8rem;
+    }
+
+    .right-content {
+        max-width: 100%;
+    }
+
+    .moneda-img {
+        height: 100px;
     }
 }
