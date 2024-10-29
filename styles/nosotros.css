@@ -354,7 +354,11 @@ h3 {
     position: relative;
     overflow: hidden;
     background-image: url('../recursos/Nosotros/Fondo/Nosotros_fondo.svg');
-    padding: 100px 0;
+    background-color: black;
+    min-height: 30vh; /* Hace que ocupe toda la altura de la pantalla */
+    display: flex;
+    align-items: center;
+    padding: 100px 150px; /* Aumenta el padding vertical y horizontal */
 }
 
 .image-section .service-title,
@@ -363,11 +367,13 @@ h3 {
 }
 
 .image-section:hover .service-title {
-    transform: translateX(-20px);
+    transform: translateX(-350px);
+    opacity: 1; /* Muestra el título */
 }
 
 .image-section:hover .service-description {
-    transform: translateX(20px);
+    transform: translateX(310px);
+    opacity: 1;
 }
 
 /* Degradado superior */
@@ -385,7 +391,7 @@ h3 {
 /* Degradado inferior */
 .image-section::after {
     content: '';
-    position: absolute;
+    position: absolute; 
     bottom: 0;
     left: 0;
     right: 0;
@@ -396,41 +402,122 @@ h3 {
 
 .service-title {
     font-family: "Baskervville", serif;
-    font-size: 2rem;
+    font-size: 3rem; /* Aumenta el tamaño de la fuente */
     color: white;
+    width: 30%;
+    text-align: right;
+    position: absolute; /* Posicionamiento absoluto */
+    left: 20%; /* Ajusta según necesites */
+    opacity: 0;
+    z-index: 1;
 }
-
 .service-description {
-    max-width: 600px;
-    margin: 0 auto;
     font-family: "Montserrat", serif;
-    line-height: 1.6;
+    font-size: 1.2rem; /* Aumenta el tamaño de la fuente */
     color: white;
+    width: 30%;
+    text-align: right;
+    position: absolute; /* Posicionamiento absoluto */
+    left:47%; /* Ajusta según necesites */
+    opacity: 0; /* Muestra el título */
+    z-index: 1;
 }
 
-.moneda-container {
+.right-content {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 100%;
+    gap: 40px;
+    flex: 2;
+}
+
+
+.content-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.service-title {
+    font-family: "Baskervville", serif;
+    font-size: 2.5rem;
+    color: white;
+    width: 30%;
+    text-align: right;
 }
 
 .moneda-img {
-    display: block;
-    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px; /* Aumenta el tamaño de la moneda */
+    height: auto;
+    z-index: 1;
 }
+
+.service-description {
+    width: 30%;
+    text-align: left;
+    font-family: "Montserrat", serif;
+    line-height: 1.6;
+    color: white;
+    margin-left: auto;
+}
+
+.image-section.moneda {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 210px !important;
+    height: 210px !important;
+    min-height: unset !important;
+    padding: 0 !important;
+    background-image: none;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 5px solid #C57C21;
+    z-index: 3;
+}
+
+.moneda-img {
+    position: relative;
+    z-index: 3;
+    width: 200px;
+    height: 200px;
+    display: block;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+/* Modificamos el efecto de brillo */
+.image-section.moneda::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 100%;
+    height: 200%;
+    background-image: url('../recursos/Nosotros/Brillo_monedas.svg');
+    background-size: 100% 100%;
+    background-position: center;
+    transition: left 0.8s ease;
+    z-index: 6;
+    pointer-events: none;
+}
+
+/* Activar la animación al hacer hover */
+.image-section:hover .image-section.moneda::before {
+    left: 200%;
+}
+
 
 /* Estilos responsivos */
-@media (max-width: 768px) {
-    .moneda-img {
-        max-width: 200px;
-    }
-    
-    .service-title {
-        font-size: 1.5rem;
-    }
-}
-
 @media (max-width: 768px) {
     .texto-derecha {
         padding-right: 5%;
@@ -440,63 +527,52 @@ h3 {
     .texto-derecha h1 {
         font-size: 2.5rem;
     }
-}
-
-.content-layout {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 100px 10%;
-    width: 100%;
-}
-
-.service-title {
-    color: white;
-    font-size: 2.5rem;
-    max-width: 40%;
-    text-align: left;
-    margin-top: 50px; /* Ajusta según necesites */
-}
-
-.right-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 40%;
-}
-
-.moneda-img {
-    height: 150px;
-    width: auto;
-    margin-bottom: 30px;
-}
-
-.service-description {
-    color: white;
-    text-align: center;
-    font-size: 1rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .content-layout {
+    .image-section {
         flex-direction: column;
-        align-items: center;
-        padding: 50px 5%;
+        padding: 3rem 1rem;
+        min-height: auto;
+        text-align: center;
+    }
+    .service-title,
+    .service-description {
+        position: absolute;
+        width: 90%;
+        left: auto;
+        text-align: center;
+        opacity: 1;
+        transform: none;
     }
 
     .service-title {
-        max-width: 100%;
-        text-align: center;
-        margin-bottom: 30px;
-        font-size: 1.8rem;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
     }
 
-    .right-content {
-        max-width: 100%;
+    .service-description {
+        font-size: 1rem;
+        margin-top: 15rem;
     }
 
-    .moneda-img {
-        height: 100px;
+    /* Nuevo efecto hover para móviles */
+    .image-section .service-title,
+    .image-section .service-description {
+        transition: transform 0.5s ease;
+        opacity: 0;
     }
+
+    .image-section:hover .service-title {
+        transform: translateY(-20px);
+        opacity: 1;
+    }
+
+    .image-section:hover .service-description {
+        transform: translateY(5px);
+        opacity: 1;
+        z-index: 2;
+    }
+
+    .image-section.moneda {
+        margin: 2rem auto;
+    }
+    
 }
