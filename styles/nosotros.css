@@ -310,9 +310,6 @@ h3 {
     padding-left: 15%; /* Ajusta este valor según necesites */
 }
 
-
-
-
 /* AQUI IRA EL CODIGO DE CADA SECCION DE LA WEB */
 .image-section.innovacion {
     margin-top: -2px;
@@ -511,9 +508,6 @@ h3 {
     z-index: 6;
     pointer-events: none;
 }
-
-/* Activar la animación al hacer hover */
-
 
 /* Degradados para las secciones principales */
 .hero::after {
