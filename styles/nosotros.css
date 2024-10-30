@@ -310,26 +310,15 @@ h3 {
     padding-left: 15%; /* Ajusta este valor según necesites */
 }
 
-@media (max-width: 1200px) {
-    .footer-left {
-        padding-left: 10%; /* Reduce el padding en pantallas más pequeñas */
-    }
-}
 
-@media (max-width: 992px) {
-    .footer-left {
-        padding-left: 5%; /* Reduce aún más el padding en pantallas medianas */
-    }
-}
-
-@media (max-width: 768px) {
-    .footer-left {
-        padding-left: 0; /* Elimina el padding en pantallas móviles */
-    }
-}
 
 
 /* AQUI IRA EL CODIGO DE CADA SECCION DE LA WEB */
+.image-section.innovacion {
+    margin-top: -2px;
+    padding-top: 120px;
+}
+
 .texto-derecha {
     position: relative;
     z-index: 1;
@@ -378,6 +367,9 @@ h3 {
     transform: translateX(310px);
     opacity: 1;
 }
+.image-section:hover .image-section.moneda::before {
+    left: 200%;
+}
 
 /* Degradado superior */
 .image-section::before {
@@ -417,7 +409,7 @@ h3 {
 
 .service-title {
     font-family: "Baskervville", serif;
-    font-size: 3rem; /* Aumenta el tamaño de la fuente */
+    font-size: 2.5rem; /* Aumenta el tamaño de la fuente */
     color: white;
     width: 30%;
     text-align: right;
@@ -457,13 +449,7 @@ h3 {
     position: relative;
 }
 
-.service-title {
-    font-family: "Baskervville", serif;
-    font-size: 2.5rem;
-    color: white;
-    width: 30%;
-    text-align: right;
-}
+
 
 .moneda-img {
     position: absolute;
@@ -527,12 +513,24 @@ h3 {
 }
 
 /* Activar la animación al hacer hover */
-.image-section:hover .image-section.moneda::before {
-    left: 200%;
+
+
+/* Degradados para las secciones principales */
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to bottom, 
+        transparent 0%,
+        rgba(0, 0, 0, 0.5) 40%,
+        rgba(0, 0, 0, 0.8) 70%,
+        rgb(0, 0, 0) 100%
+    );
+    z-index: 2;
 }
-
-
-/* Estilos responsivos */
 @media (max-width: 768px) {
     .texto-derecha {
         padding-right: 5%;
@@ -560,12 +558,12 @@ h3 {
     }
 
     .service-title {
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem;
+        font-size: 1.2rem;
+        margin-bottom: 2.5rem;
     }
 
     .service-description {
-        font-size: 1rem;
+        font-size: 0.9rem;
         margin-top: 15rem;
     }
 
@@ -590,109 +588,6 @@ h3 {
     .image-section.moneda {
         margin: 2rem auto;
     }
-    
-}
-
-/* Degradados para las secciones principales */
-.hero::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 150px;
-    background: linear-gradient(to bottom, 
-        transparent 0%,
-        rgba(0, 0, 0, 0.5) 40%,
-        rgba(0, 0, 0, 0.8) 70%,
-        rgb(0, 0, 0) 100%
-    );
-    z-index: 2;
-}
-
-@media (max-width: 768px) {
-    .image-section::before,
-    .image-section::after {
-        height: 80px; /* Altura ajustada para móviles */
-    }
-}
-
-/* Asegurarse de que las secciones estén pegadas */
-.image-section + .image-section {
-    margin-top: 0;
-}
-
-/* Ajustes para móvil */
-@media (max-width: 768px) {
-    .image-section {
-        padding: 80px 20px;
-    }
-
-    .image-section::before,
-    .image-section::after {
-        height: 100px;
-    }
-}
-
-/* Ajustes específicos para móvil */
-@media (max-width: 768px) {
-    .image-section {
-        padding: 100px 20px;
-        min-height: 50vh;
-        border: none !important; /* Forzar eliminación de bordes */
-        outline: none !important; /* Eliminar outlines */
-        margin: -1px 0; /* Truco para eliminar gaps */
-    }
-
-    /* Degradado superior más intenso para móvil */
-    .image-section::before {
-        content: '';
-        position: absolute;
-        top: -2px; /* Extender ligeramente para cubrir cualquier gap */
-        left: 0;
-        width: 100%;
-        height: 100px;
-        background: linear-gradient(180deg, 
-            rgb(0, 0, 0) 0%,
-            rgb(0, 0, 0) 5%,
-            rgba(0, 0, 0, 0.8) 30%,
-            rgba(0, 0, 0, 0.5) 60%,
-            transparent 100%
-        );
-        z-index: 2;
-    }
-
-    /* Degradado inferior más intenso para móvil */
-    .image-section::after {
-        content: '';
-        position: absolute;
-        bottom: -2px; /* Extender ligeramente para cubrir cualquier gap */
-        left: 0;
-        width: 100%;
-        height: 100px;
-        background: linear-gradient(0deg, 
-            rgb(0, 0, 0) 0%,
-            rgb(0, 0, 0) 5%,
-            rgba(0, 0, 0, 0.8) 30%,
-            rgba(0, 0, 0, 0.5) 60%,
-            transparent 100%
-        );
-        z-index: 2;
-    }
-
-    /* Asegurar que las secciones consecutivas no tengan espacio entre ellas */
-    .image-section + .image-section {
-        margin-top: -2px; /* Solapar ligeramente las secciones */
-    }
-}
-
-/* Ajuste para la primera sección después del hero */
-.image-section.innovacion {
-    margin-top: -2px;
-    padding-top: 120px;
-}
-
-@media (max-width: 768px) {
     .hero::after {
         height: 120px;
         background: linear-gradient(to bottom, 
@@ -711,8 +606,88 @@ h3 {
 
     /* Asegurar que no haya líneas blancas */
     .image-section {
+        border: none !important; /* Forzar eliminación de bordes */
         border-top: none !important;
         border-bottom: none !important;
         box-shadow: none !important;
+        outline: none !important; /* Eliminar outlines */
+        margin: -1px 0; /* Truco para eliminar gaps */
     }
+    
+    /* Degradado superior más intenso para móvil */
+    .image-section::before {
+        content: '';
+        position: absolute;
+        top: -2px; /* Extender ligeramente para cubrir cualquier gap */
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: linear-gradient(180deg, 
+            rgb(0, 0, 0) 0%,
+            rgb(0, 0, 0) 5%,
+            rgba(0, 0, 0, 0.8) 30%,
+            rgba(0, 0, 0, 0.5) 60%,
+            transparent 100%
+        );
+        z-index: 2;
+    }
+    /* Asegurar que las secciones consecutivas no tengan espacio entre ellas */
+    .image-section + .image-section {
+        margin-top: -2px; /* Solapar ligeramente las secciones */
+    }
+    .image-section {
+        padding: 80px 20px;
+    }
+    .image-section::before,
+    .image-section::after {
+        height: 100px;
+    }
+    .footer-left {
+        padding-left: 0; /* Elimina el padding en pantallas móviles */
+    }
+}
+@media (max-width: 1200px) {
+    .footer-left {
+        padding-left: 10%; /* Reduce el padding en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 992px) {
+    .footer-left {
+        padding-left: 5%; /* Reduce aún más el padding en pantallas medianas */
+    }
+}
+.image-section.responsabilidad::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(0deg, 
+        rgb(0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.9) 30%,
+        rgba(0, 0, 0, 0.7) 60%,
+        transparent 100%
+    );
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Agregar degradado al inicio del footer */
+.informacion-redes::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(180deg, 
+        rgb(0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.9) 30%,
+        rgba(0, 0, 0, 0.7) 60%,
+        transparent 100%
+    );
+    z-index: 2;
+    pointer-events: none;
 }
