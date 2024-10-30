@@ -156,6 +156,7 @@
 }
 body {
     padding-top: 0; /* Elimina el padding-top */
+    background-color: black;
 }
 
 
