@@ -159,6 +159,8 @@
 }
 body {
     padding-top: 0; /* Elimina el padding-top */
+    background-color: black;
+    animation: fadeIn 0.5s;
 }
 
 

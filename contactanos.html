@@ -34,16 +34,54 @@
     <section class="hero">
         <div class="video-background">
             <video autoplay loop muted playsinline>
-                <source src="recursos/video_waves.webm" type="video/webm">
+                <source src="recursos/Contactanos/contactanos.webm  " type="video/webm">
             </video>
         </div>
         <div class="texto-central">
-            <h1>Evoluciona tu manera de comunicar</h1>
-            <p>¡Tu marca será el centro de atención!</p>
+            <h1>¡Estás a un paso de alcanzar el éxito con nosotros!</h1>
         </div>
     </section>
+    <section class="formulario-contacto">
+        <div class="container">
+            <h2 class="text-left mb-5">¿Alguna duda?</h2>
+            <form class="row">
+                <div class="col-md-6">
+                    <div class="mb-4">
+                        <input type="text" class="form-control form-control-lg custom-input" placeholder="Nombres">
+                    </div>
+                    <div class="mb-4">
+                        <input type="text" class="form-control form-control-lg custom-input" placeholder="Apellidos">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="input-group">
+                            <select class="form-select custom-input codigo-pais" id="codigoPais" aria-label="Código de país">
+                                <option value="" selected disabled>+51</option>
+                            </select>
+                            <input type="tel" class="form-control form-control-lg custom-input" placeholder="Móvil">
+                        </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <input type="email" class="form-control form-control-lg custom-input" placeholder="Mail">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="mb-4">
+                        <input type="text" class="form-control form-control-lg custom-input" placeholder="Asunto">
+                    </div>
+                    <div class="mb-4">
+                        <textarea class="form-control form-control-lg custom-input" rows="4" placeholder="Mensaje"></textarea>
+                    </div>
+                </div>
 
-
+                <div class="col-12">
+                    <button type="submit" class="btn btn-custom w-100">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </section>
     <footer class="informacion-redes">
         <div class="container">
             <div class="row">
@@ -79,11 +117,13 @@
                         </a>
                     </div>
                 </div>
+
             </div>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="javascript/Home/home.js"></script>
+    <script src="javascript/Home/Contactanos/Contactanos.js"></script>
 </body>
 </html>

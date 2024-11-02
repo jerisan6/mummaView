@@ -205,9 +205,10 @@
 }
 
 body {
-    padding-top: 0; /* Elimina el padding-top */
+    padding-top: 0; 
+    background-color: black;
+    animation: fadeIn 0.5s;
 }
-
 .servicios-preview {
     background-color: black;
     background-image: url('../recursos/Fondo de títulos-opacidad75.png');
