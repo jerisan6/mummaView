@@ -80,7 +80,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('C:/MummaProjects/Mummaview/mummaView/recursos/NavBar/Degradado_fondo_M.svg');
+    background-image: url('../recursos/NavBar/Degradado_fondo_M.svg');
     background-size: cover;
     opacity: 0;
     transition: opacity 0.3s ease;

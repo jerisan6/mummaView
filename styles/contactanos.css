@@ -104,7 +104,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('C:/MummaProjects/Mummaview/mummaView/recursos/NavBar/Degradado_fondo_M.svg');
+    background-image: url('../recursos/NavBar/Degradado_fondo_M.svg');
     background-size: cover;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -182,7 +182,7 @@
     border-color: #C57C21;
 }
 body {
-    padding-top: 0; /* Elimina el padding-top */
+    padding-top: 0; 
     background-color: black;
     animation: fadeIn 0.5s;
 }
@@ -201,20 +201,17 @@ body {
     margin-top: -50px;
 }
 
-/* Agrega estos nuevos estilos */
 .logo-container {
-    margin-bottom: 20px; /* Ajusta según sea necesario */
+    margin-bottom: 20px;
 }
 
 .footer-logo {
-    max-width: 150px; /* Ajusta el tamaño según tus necesidades */
+    max-width: 150px;
     height: auto;
 }
-
-/* Si necesitas hacer el logo responsive, puedes agregar media queries */
 @media (max-width: 768px) {
     .footer-logo {
-        max-width: 120px; /* Tamaño más pequeño para pantallas móviles */
+        max-width: 120px;
     }
 }
 
@@ -226,8 +223,8 @@ h3 {
 .mapa-container {
     overflow: hidden;
     max-width: 100%;
-    height: 200px; /* Ajusta según tus necesidades */
-    margin-top: 20px; /* Añade un poco de espacio arriba del mapa */
+    height: 200px;
+    margin-top: 20px;
 }
 
 .mapa-imagen {
@@ -238,15 +235,15 @@ h3 {
 }
 
 .mapa-container:hover .mapa-imagen {
-    transform: scale(1.1); /* Ajusta el valor para más o menos zoom */
+    transform: scale(1.1);
 }
 .col-md-4.offset-md-2 {
-    margin-left: 12.5%; /* Ajusta este valor según necesites */
+    margin-left: 12.5%;
 }
 
 @media (max-width: 768px) {
     .col-md-4.offset-md-2 {
-        margin-left: 0; /* Elimina el margen en pantallas pequeñas */
+        margin-left: 0;
     }
 }
 
@@ -266,13 +263,13 @@ h3 {
 
 .redes-sociales {
     margin-top: 50px;
-    margin-bottom: 60px; /* Añade un poco de espacio debajo de las redes sociales */
+    margin-bottom: 60px;
 }
 
 .red-social {
     display: inline-block;
-    width: 40px; /* Ajusta según el tamaño deseado */
-    height: 40px; /* Ajusta según el tamaño deseado */
+    width: 40px;
+    height: 40px;
     margin-right: 10px;
     background-color: transparent;
     transition: transform 0.3s ease;
@@ -282,10 +279,10 @@ h3 {
     transform: scale(1.1);
 }
 
-/* Estilos específicos para cada red social */
+
 .red-social.facebook {
     background-image: url('../recursos/Footer/facebook_dorado.svg');
-    background-size: contain; /* Asegura que la imagen se ajuste dentro del contenedor */
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -319,9 +316,9 @@ h3 {
 }
 
 .copyright {
-    margin-top: 20px; /* Ajusta este valor para controlar la distancia desde las redes sociales */
+    margin-top: 20px;
     font-size: 0.9rem;
-    color: #888; /* Ajusta el color según tu diseño */
+    color: #888;
     margin-bottom: 60px;
 }
 
@@ -338,28 +335,27 @@ h3 {
 }
 
 .footer-left {
-    padding-left: 15%; /* Ajusta este valor según necesites */
+    padding-left: 15%;
 }
 
 @media (max-width: 1200px) {
     .footer-left {
-        padding-left: 10%; /* Reduce el padding en pantallas más pequeñas */
+        padding-left: 10%;
     }
 }
 
 @media (max-width: 992px) {
     .footer-left {
-        padding-left: 5%; /* Reduce aún más el padding en pantallas medianas */
+        padding-left: 5%; 
     }
 }
 
 @media (max-width: 768px) {
     .footer-left {
-        padding-left: 0; /* Elimina el padding en pantallas móviles */
+        padding-left: 0; 
     }
 }
 
-/*AQUI IRA EL CODIGO DE CADA SECCION DE LA WEB*/
 
 .formulario-contacto {
     background-color: #000;
@@ -403,7 +399,7 @@ h3 {
 }
 
 .btn-custom {
-    background-color: #8B4513; /* Color café/marrón */
+    background-color: #8B4513;
     color: white;
     padding: 15px;
     border: none;
@@ -415,8 +411,6 @@ h3 {
     background-color: #6B3410;
     color: white;
 }
-
-/* Ajustes responsive */
 @media (max-width: 768px) {
     .formulario-contacto {
         padding: 40px 20px;
@@ -426,10 +420,9 @@ h3 {
         font-size: 2rem;
     }
 }
-/* Personalizar la flecha del select */
 .codigo-pais {
     padding-right: 2.5rem !important;
-    max-width: 150px !important; /* Reducido para mostrar solo el código */
+    max-width: 150px !important; 
     background-color: #3f3f3f !important;
     color: white !important;
     border: 1px solid rgba(255, 255, 255, 0.3) !important;
@@ -441,15 +434,11 @@ h3 {
     background-color: #000;
     color: white;
 }
-
-/* Ajuste responsive */
 @media (max-width: 768px) {
     .codigo-pais {
         max-width: 80px !important;
     }
 }
-
-/* Ajustes responsivos para los degradados */
 @media (max-width: 768px) {
     .formulario-contacto {
         padding: 40px 20px;

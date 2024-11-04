@@ -78,7 +78,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('C:/MummaProjects/Mummaview/mummaView/recursos/NavBar/Degradado_fondo_M.svg');
+    background-image: url('../recursos/NavBar/Degradado_fondo_M.svg');
     background-size: cover;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -169,7 +169,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     padding: 50px 0;
-    color: #ffffff; /* Asegúrate de que el texto sea visible sobre el fondo */
+    color: #ffffff; 
 }
 
 /* Agrega estos nuevos estilos */
@@ -182,7 +182,6 @@ body {
     height: auto;
 }
 
-/* Si necesitas hacer el logo responsive, puedes agregar media queries */
 @media (max-width: 768px) {
     .footer-logo {
         max-width: 120px; /* Tamaño más pequeño para pantallas móviles */
@@ -197,8 +196,8 @@ h3 {
 .mapa-container {
     overflow: hidden;
     max-width: 100%;
-    height: 200px; /* Ajusta según tus necesidades */
-    margin-top: 20px; /* Añade un poco de espacio arriba del mapa */
+    height: 200px; 
+    margin-top: 20px; 
 }
 
 .mapa-imagen {
@@ -209,8 +208,7 @@ h3 {
 }
 
 .mapa-container:hover .mapa-imagen {
-    transform: scale(1.1); /* Ajusta el valor para más o menos zoom */
-}
+    transform: scale(1.1); }
 .col-md-4.offset-md-2 {
     margin-left: 12.5%; /* Ajusta este valor según necesites */
 }
@@ -237,7 +235,7 @@ h3 {
 
 .redes-sociales {
     margin-top: 50px;
-    margin-bottom: 60px; /* Añade un poco de espacio debajo de las redes sociales */
+    margin-bottom: 60px; 
 }
 
 .red-social {
@@ -290,9 +288,9 @@ h3 {
 }
 
 .copyright {
-    margin-top: 20px; /* Ajusta este valor para controlar la distancia desde las redes sociales */
+    margin-top: 20px; 
     font-size: 0.9rem;
-    color: #888; /* Ajusta el color según tu diseño */
+    color: #888;
     margin-bottom: 60px;
 }
 
@@ -309,7 +307,7 @@ h3 {
 }
 
 .footer-left {
-    padding-left: 15%; /* Ajusta este valor según necesites */
+    padding-left: 15%; 
 }
 
 /* AQUI IRA EL CODIGO DE CADA SECCION DE LA WEB */
@@ -419,13 +417,13 @@ h3 {
 }
 .service-description {
     font-family: "Montserrat", serif;
-    font-size: 1.2rem; /* Aumenta el tamaño de la fuente */
+    font-size: 1.2rem; 
     color: white;
     width: 30%;
     text-align: right;
-    position: absolute; /* Posicionamiento absoluto */
-    left:47%; /* Ajusta según necesites */
-    opacity: 0; /* Muestra el título */
+    position: absolute;
+    left:47%; 
+    opacity: 0;
     z-index: 1;
 }
 
